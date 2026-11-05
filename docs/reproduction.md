@@ -1,10 +1,12 @@
-# 复现步骤：云端训练与本地 WSL 仿真
+# Reproduction: Cloud Training and Local WSL Simulation
 
-本文件按本次实际流程整理。项目整理时只做资料与补丁核验，没有重新下载数据、训练或仿真。完整训练后权重未备份到本地，因此启动该微调模型之前需要取得完整检查点或重新训练。
+English | [简体中文](reproduction.zh-CN.md)
 
-## 1. 云端准备固定版本
+These commands follow the recorded workflow. Documentation maintenance only checks files and patches; it does not rerun data downloads, training, or simulation. The local artifacts do not contain a complete fine-tuned checkpoint, so serving that model requires a full checkpoint or retraining.
 
-把本项目放在云端任意目录，从本项目根目录运行：
+## 1. Prepare the pinned cloud runtime
+
+Copy or clone this project onto the cloud host, then run from its root:
 
 ```bash
 export PROJECT_DIR="$PWD"
@@ -20,14 +22,20 @@ export HF_HOME="$PI_ROOT/cache/huggingface"
 export HF_LEROBOT_HOME="$PI_ROOT/data/lerobot"
 ```
 
-需要预先安装 uv，并使用可运行当前依赖的 Python 3.11 / Ubuntu 22.04 / NVIDIA CUDA 环境。确切依赖见 environments 和上游 uv.lock。云端记录的解释器为 Python 3.11.18；归档时平台报告 GPU 显存约 32 GiB。GPU 配方以 smoke 的实际结果为准。
+Install uv first and use a Python 3.11 / Ubuntu 22.04 / NVIDIA CUDA environment compatible with the pinned dependencies. Recorded cloud Python was 3.11.18; the archived platform report shows approximately 32 GiB GPU memory. Use a real smoke run to validate the chosen device and recipe.
 
-脚本保留原实验的固定目录布局。stage_metadata.py 只复制 ID 清单和已保存的训练归一化文件，不下载数据或权重，也不启动训练。
+The two scripts connect separate directories:
 
-## 2. 云端下载与核验数据
+- `PROJECT_DIR`: this reproduction project.
+- `PI_ROOT/openpi`: the full upstream checkout, including `src/openpi/` and `scripts/train.py`.
+- `bootstrap_openpi.sh`: fetch the pinned source and submodules, then apply the project patch.
+- `stage_metadata.py`: copy split IDs and saved normalization into the runtime layout. It does not download the dataset or weights, or start training.
 
-如果使用 AutoDL 学术资源加速，在需要访问 GitHub / Hugging Face 的当前终端运行：
-`source /etc/network_turbo`。来源：[AutoDL 官方说明](https://www.autodl.com/docs/network_turbo/)；该服务不承诺稳定性。
+This setup retains `/root/autodl-tmp/pi-libero`, the path used in the archived patch. Changing the runtime layout also requires updating the patch's configuration paths. Exact dependency records are in `environments/`; rebuild against the upstream `uv.lock` rather than treating a package-version snapshot as a complete installer.
+
+## 2. Download and verify data on the cloud host
+
+On AutoDL, `source /etc/network_turbo` enables its academic-resource acceleration in the current terminal. See the [official instructions](https://www.autodl.com/docs/network_turbo/); availability is not guaranteed.
 
 ```bash
 python "$PROJECT_DIR/scripts/data/prepare_libero10.py" \
@@ -36,11 +44,11 @@ python "$PROJECT_DIR/scripts/data/prepare_libero10.py" \
 python "$PROJECT_DIR/scripts/data/verify_libero10.py"
 ```
 
-下载固定版本下属于 LIBERO_10 的 379 条原始编号 Parquet，其中训练 329、留出验证 50。源元数据仍描述完整上游数据，训练必须显式传入 ID。核验脚本逐文件检查 SHA256、帧数、数值有限性和 8/7 维 state/action，并创建不重复占用数据空间的硬链接视图。
+This retrieves 379 original-ID Parquet episodes from the pinned LIBERO_10 subset: 329 training and 50 held out. Source metadata still describes the full upstream dataset, so explicit episode selection is required.
 
-此步骤在云端执行；本地仿真不需要下载这些训练 Parquet。
+Verification checks SHA256, frame counts, finite values, and 8/7-dimensional state/action arrays. It creates hard-link views for the split without duplicating the Parquet bytes. These training Parquet files are not needed by the local simulation client.
 
-获取 pi05_base 初始化权重可使用上游下载工具，或按上游 README 取得同一检查点：
+Obtain the `pi05_base` initialization with the upstream downloader or the corresponding upstream instructions:
 
 ```bash
 python - <<'PY'
@@ -49,22 +57,22 @@ print(download.maybe_download("gs://openpi-assets/checkpoints/pi05_base"))
 PY
 ```
 
-预期配置读取：/root/autodl-tmp/pi-libero/cache/openpi/openpi-assets/checkpoints/pi05_base/params。取得文件后核对实际目录；下载需要可用网络。
+The archived configuration expects `/root/autodl-tmp/pi-libero/cache/openpi/openpi-assets/checkpoints/pi05_base/params`. Confirm the resulting path. Dependency, model, tokenizer, and dataset acquisition require working network access before offline checks.
 
-## 3. 检查实际只加载训练子集
+## 3. Verify the actual training subset
 
-数据准备完成后：
+After data preparation:
 
 ```bash
 JAX_PLATFORMS=cpu CUDA_VISIBLE_DEVICES=-1 \
   python "$PROJECT_DIR/scripts/data/verify_train329_loader.py"
 ```
 
-应检查 329 个 episode、87,769 帧和 658 个回合边界样本，没有验证 ID 混入。公开目录中的历史报告保存于 results/verification。
+The real loader should select 329 episodes, 87,769 frames, and 658 checked boundary samples, with no held-out episode leakage. Historical reports are under `results/verification/`.
 
-## 4. 训练集归一化
+## 4. Compute training-only normalization
 
-已有本次统计保存在 results/normalization/norm_stats.json。若复现完整计算，使用原版统计脚本，在进程内单独修改统计 batch，以完整覆盖所有帧：
+Saved statistics are in `results/normalization/norm_stats.json`. To reproduce their computation, use the original statistics script with an in-process normalization-only batch override:
 
 ```bash
 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 \
@@ -81,9 +89,9 @@ compute_norm_stats.main("pi05_libero10_lora")
 PY
 ```
 
-101×869=87,769，统计覆盖全部训练帧。这个进程内的 batch 不会改写训练配方。归一化与模型推理必须使用同一统计。
+101 × 869 = 87,769, covering every training frame. This override does not rewrite the training recipe. Inference must use statistics matching the trained checkpoint.
 
-## 5. GPU smoke 与正式训练
+## 5. Run a GPU smoke check and train
 
 ```bash
 export CUDA_VISIBLE_DEVICES=0 JAX_PLATFORMS=cuda
@@ -95,9 +103,9 @@ python scripts/train.py pi05_libero10_lora \
   --batch-size 2 --num-train-steps 20
 ```
 
-检查真实更新、有限 loss/梯度、最终检查点保存和重新加载，再开始长训练。历史 batch=2 重载报告在 results/verification/smoke_b2_reload.json；它的合成输入接口检查不能当成任务成功率。
+Check real optimizer updates, finite loss/gradients, checkpoint saving, and reloadability before a long run. The historical reload receipt is `results/verification/smoke_b2_reload.json`; its synthetic-input interface check is not a task-success measurement.
 
-本次正式命令：
+Recorded training command:
 
 ```bash
 python -u scripts/train.py pi05_libero10_lora \
@@ -105,11 +113,11 @@ python -u scripts/train.py pi05_libero10_lora \
   --batch-size 2 --num-train-steps 40000
 ```
 
-复现新实验时换一个 exp-name，不覆盖旧结果。学习率 decay_steps 保持 10,000。检查点包含 params、assets 和续训用 train_state；本次完整一份约 8.9 GiB，另需给数据、初始模型、环境及 smoke 留空间。
+Choose a new experiment name for a new run. Learning-rate decay remains 10,000 steps. A checkpoint includes `params`, `assets`, and resumable `train_state`; one recorded checkpoint is about 8.9 GiB. Also allow disk space for data, initialization weights, dependencies, and smoke checkpoints.
 
-## 6. 云端加载最终检查点
+## 6. Serve the final checkpoint on the cloud host
 
-必须先具有完整检查点。目录编号 39999 对应从 0 开始的 40,000 步训练。
+A complete checkpoint is required. Step 39999 represents 40,000 optimizer updates with zero-based numbering.
 
 ```bash
 CKPT="$PI_ROOT/checkpoints/pi05_libero10_lora/libero10_b2_s40000_20261103_234738/39999"
@@ -118,16 +126,16 @@ python scripts/serve_policy.py --port 8000 policy:checkpoint \
   --policy.dir "$CKPT"
 ```
 
-保持模型服务运行。单独使用 --env LIBERO 会加载官方默认模型，不会加载本次的自定义微调检查点。
+Keep the service running. `--env LIBERO` alone selects the upstream default policy, not this custom fine-tuned checkpoint.
 
-## 7. 本地 Ubuntu 22.04 / WSL 客户端
+## 7. Prepare the local Ubuntu 22.04 / WSL client
 
-已存在本机可运行环境时，继续使用 /home/pp/projects/openpi 和 examples/libero/.venv。
+On the original machine, the working client checkout is `/home/pp/projects/openpi`, with its Python environment under `examples/libero/.venv`.
 
-从头配置客户端时，先在本地克隆同一上游版本及子模块，再使用独立 Python 3.8 环境。客户端与云端 Python 环境分开：
+For a fresh client, obtain the same source revision and submodules and create a separate Python 3.8 environment:
 
 ```bash
-# PROJECT_DIR 指向本项目根目录
+# PROJECT_DIR points to this project's root
 export PROJECT_DIR=/home/pp/projects/pi05-libero10-finetuning
 cd /home/pp/projects
 git clone --no-checkout https://github.com/Physical-Intelligence/openpi.git openpi
@@ -142,7 +150,7 @@ uv pip sync "$PROJECT_DIR/environments/client_requirements_cpu.txt" \
 uv pip install -e packages/openpi-client -e third_party/libero
 ```
 
-WSLg 图形加速和本机 GPU 驱动需可用。本实验使用以下渲染变量：
+The local paths below use the original example username `pp`; adapt them to your machine consistently. WSLg graphics acceleration and a compatible host GPU driver are required. The recorded setup uses:
 
 ```bash
 export PYTHONPATH="$PWD/third_party/libero${PYTHONPATH:+:$PYTHONPATH}"
@@ -152,7 +160,7 @@ export MESA_LOADER_DRIVER_OVERRIDE=d3d12 GALLIUM_DRIVER=d3d12
 export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
 ```
 
-初次使用时生成本地 LIBERO 路径配置：
+For first use, create the local LIBERO path configuration:
 
 ```bash
 python - <<'PY'
@@ -174,11 +182,11 @@ path.write_text(yaml.safe_dump(expected))
 PY
 ```
 
-这里的 datasets 只是客户端配置需要的空目录，不是训练数据下载位置。
+The `datasets` directory here is an empty client configuration path, not the training-data download destination.
 
-## 8. SSH 隧道、本地评估与视频
+## 8. Tunnel, evaluate, and save videos
 
-本地 WSL 一个终端建立隧道，填入当前实例实际 SSH 主机与端口：
+In one local WSL terminal, substitute the current instance's actual SSH host and port:
 
 ```bash
 ssh -N -T -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 \
@@ -186,7 +194,7 @@ ssh -N -T -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 \
   -p YOUR_SSH_PORT root@YOUR_SSH_HOST
 ```
 
-另一个 WSL 终端激活客户端环境并设置上一节的渲染变量后：
+In another WSL terminal, activate the client and set the graphics variables from the previous section, then run:
 
 ```bash
 cd /home/pp/projects/openpi
@@ -201,9 +209,6 @@ python examples/libero/main.py \
   --args.video-out-path "$VIDEO_DIR" 2>&1 | tee "$VIDEO_DIR/eval.log"
 ```
 
-仿真录制为 MP4，直接在本地 VS Code 中打开。首个请求有模型编译等待。此版本会遍历整个套件，不提供 --task-id 参数。
+MP4 files are saved locally and can be opened in VS Code. The first model request includes compilation time. This pinned client iterates through the entire suite and has no `--task-id` option.
 
-
-
-当前整理没有创建远端仓库或推送内容。完整权重、数据、环境和私有原始归档不属于提交内容。GitHub 普通 Git 仓库会阻止超过 100 MiB 的单个文件，参见 [GitHub 官方说明](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)。
-
+For multiple trials, the original task-plus-result filename scheme can overwrite repeated outcomes. Use distinct output directories per round or record an intentional naming change to retain every video.

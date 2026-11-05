@@ -1,18 +1,21 @@
-# 数据清单
+# Dataset and Split Records
 
-原始 LIBERO 官方入口：https://github.com/Lifelong-Robot-Learning/LIBERO#Dataset
+English | [简体中文](README.zh-CN.md)
 
-本实验实际训练读取的是 physical-intelligence/libero 的 LeRobot 格式数据，而非直接读取原始 HDF5：
+Original LIBERO dataset entry:
+https://github.com/Lifelong-Robot-Learning/LIBERO#Dataset
+
+The experiment trains on PI's LeRobot-formatted data, rather than reading the raw HDF5 files directly:
 https://huggingface.co/datasets/physical-intelligence/libero
 
-固定 revision：a4336d589d589045d1c56423ffdf3b88a0e19b1f。
+Pinned revision: `a4336d589d589045d1c56423ffdf3b88a0e19b1f`.
 
-- LIBERO_10 来源子集共 379 条演示、101,469 帧。
-- train329.json：329 条训练 ID，87,769 帧。
-- validation50.json：50 条留出 ID，13,700 帧。
-- 按任务分别打乱，每任务留出 5 条；seed=7，具体任务顺序与算法写在 source_manifest.json。
-- IDs 保留上游原始编号，没有重新索引。
-- source_manifest.json 保存源文件 SHA256、大小、任务和划分，可以重新校验下载。
-- 50 条验证演示未参与训练或归一化，本次没有另外计算验证损失。
+- LIBERO_10 source subset: 379 demonstrations and 101,469 frames.
+- `splits/train329.json`: 329 training episode IDs, 87,769 frames.
+- `splits/validation50.json`: 50 held-out episode IDs, 13,700 frames.
+- IDs are shuffled separately by task with seed 7, holding out 5 per task. Task order and the exact algorithm are recorded in `splits/source_manifest.json`.
+- Original upstream episode IDs are preserved.
+- The source manifest records SHA256, byte size, task membership, and split assignment for reproducible verification.
+- The held-out episodes are excluded from training and normalization. No dedicated validation loss was computed.
 
-此目录不含实际 Parquet、图像或模型权重。数据下载命令应在云端执行，见 docs/reproduction.md。
+This directory contains no Parquet files, images, or model weights. Run data preparation on the cloud host; see [Reproduction](../docs/reproduction.md).

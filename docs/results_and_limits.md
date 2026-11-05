@@ -1,34 +1,39 @@
-# 结果与当前边界
+# Results and Limitations
 
-## 本次可以确认的结果
+English | [简体中文](results_and_limits.zh-CN.md)
 
-- 数据准备、真实 loader 子集检查、训练集归一化、batch=1/2 smoke、batch=2 检查点重载均有归档证据。
-- batch=2、40,000 次优化更新已完成，最终检查点 39999 保存完成，进程退出码为 0。
-- 最终检查点通过云端服务与本地 LIBERO 客户端完成 10 次闭环仿真：8 成功、2 失败。
-- results/task_results.csv 与 10 条 MP4、完整 eval 日志相互对应。
+## Verified outcomes
 
-失败：
+- Records cover data preparation, real-loader subset checks, train-only normalization, batch-1/2 smoke runs, and a batch-2 checkpoint reload.
+- Training completed 40,000 optimizer steps at batch size 2, saved checkpoint 39999, and exited with code 0.
+- That checkpoint completed 10 LIBERO_10 closed-loop rollouts through the cloud service and local client: 8 successes and 2 failures.
+- The fine-tuned per-task CSV, ten MP4 files, and full evaluation log agree.
+- The ten original historical `pi05_base` videos are retained, all labeled failure (0/10), with byte-for-byte archive SHA256 matches.
+
+Failed tasks:
 1. put both the cream cheese box and the butter in the basket
 2. put the yellow and white mug in the microwave and close it
 
-尚未通过逐帧分析确定失败原因，因此不把失败归因于抓取、动作幅度或训练量中的某个因素。
+No frame-by-frame failure analysis has established the cause, so these outcomes are not attributed to a particular training or control factor.
 
-## 对比如何理解
+## Interpreting historical comparisons
 
-此前本地保存的 base 视频为 0/10，官方 LIBERO 专用权重视频为 10/10。这些是历史运行，并未在这次项目整理时重新执行；当前公开目录主要保留这次微调后的完整评估证据。
+Fine-tuned evidence: [per-task results](../results/task_results.csv) and [evaluation log](../results/logs/eval_40000.log). Base evidence: [video provenance](../media/pi05_base/README.md) and [historical summary](../results/pi05_base_summary.json).
 
-此前 base 测试使用了 LIBERO 接口和借用的 LIBERO 归一化统计，不能作为严格的“完全不接触目标域数据”的零样本结果。
+The base result is inferred from historical video filenames. Its full evaluation log and exact inference settings are not preserved here. It used a LIBERO interface and borrowed LIBERO normalization, so it is not a strict target-data-free zero-shot baseline.
 
-## 不能从本次结果推出的结论
+A separate historical official LIBERO-policy run had 10/10 success-labeled videos. Those videos are not included in this project, and that comparison was not rerun.
 
-- 每个任务只跑了一次，80% 不能直接当成多初态、多种子标准基准表现。
-- 50 条演示仅隔离保留，没有专门计算离线验证损失。
-- 训练与留出演示均来自同一组 10 个任务，未验证未见任务泛化。
-- 没有真机部署，也没有验证本地 8GB GPU 完整模型推理。
-- 本地权重备份中止，仓库不提供可用的完整检查点。
+## Current limits
 
-## 若继续实验
+- One rollout per task is insufficient to claim a multi-initial-state, multi-seed benchmark result.
+- The 50 demonstrations were held out, but no dedicated offline validation loss was computed.
+- Training and held-out demonstrations belong to the same 10 tasks; unseen-task generalization was not tested.
+- No real-robot deployment or full-model inference on the local 8GB GPU was verified.
+- The local artifacts do not contain a complete fine-tuned checkpoint; rerunning the model requires a full checkpoint or retraining.
 
-建议先在相同初始化和评估预算下比较 base、微调模型和官方 LIBERO 模型，再扩大到每任务多次。原版客户端的视频命名只含任务名和 success/failure，多次同结果会覆盖；需要保留所有视频时，应分轮使用独立目录或记录命名修改。
+## Further experiments
 
-本仓库中的训练/加载日志是历史证据。项目整理阶段只做静态、补丁和资料一致性检查，不代表重新运行训练或仿真。
+Compare models under aligned initializations and evaluation budgets, then increase the trials per task. The original client names videos by task and success/failure, so repeated outcomes overwrite files. Use separate directories per round or record a naming change if all videos must be kept.
+
+Training and loader reports are historical evidence. Documentation maintenance only checks static files and evidence consistency; it does not rerun training or simulation.

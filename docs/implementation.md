@@ -1,40 +1,44 @@
-# 修改内容与数据契约
+# Implementation and Data Contract
 
-## 已实现的修改
+English | [简体中文](implementation.zh-CN.md)
 
-本项目没有提出新的 VLA 模型结构。代码改动集中在 OpenPI 的两个文件，完整差异见 patches/openpi-libero10-lora.patch。
+## Source changes
 
-1. src/openpi/training/config.py：为 DataConfig 增加 episodes 字段，注册 pi05_libero10_lora 配方，使用固定的 329 条训练 ID、pi05_base 初始化权重、action_horizon=10 及官方 LoRA 模型变体。
-2. src/openpi/training/data_loader.py：把 episodes 参数传入 LeRobotDataset，并修复稀疏原始 episode ID 与紧凑边界表之间的索引映射。
+This project uses the upstream VLA architecture. The exact changes to two OpenPI files are in `patches/openpi-libero10-lora.patch`.
 
-后者用于本次固定的 LeRobot 版本：数据行仍带原始全局 episode_index，筛选后的 episode_data_index 却按子集紧凑排列。扩展边界表后，每个动作序列能按正确边界取样，并在回合末尾填充，不会误取其他 episode。
+1. `src/openpi/training/config.py`: adds the `episodes` field to `DataConfig` and registers `pi05_libero10_lora`, with the 329 training IDs, `pi05_base` initialization, a 10-step action horizon, and the official LoRA variants.
+2. `src/openpi/training/data_loader.py`: passes the selected episodes to `LeRobotDataset` and adapts the episode-boundary lookup for sparse original episode IDs.
 
-## 数据契约
+In the pinned LeRobot version, rows retain global `episode_index` values while the filtered boundary table is compact. Expanding that table restores the original-ID lookup, so sampled action chunks stay within the correct episode and use endpoint padding.
 
-- 仿真图像与腕部图像；输入时按原版客户端旋转 180° 并 resize/pad 到 224。
-- state 为 8 维：末端位置 3、轴角姿态 3、夹爪状态 2。
-- 真实动作是 7 维，训练动作序列长度为 10。
-- 客户端默认每次执行前 5 步动作后重新规划。
-- extra_delta_transform=False，保持与该 LIBERO 数据适配器一致。
+## Data contract
 
-在历史真实加载器检查中，329 个原始 episode ID、87,769 帧已核对，并检查了 658 个回合首尾样本。报告保存在 results/verification/loader_verification.json。
+- Agent-view and wrist-view images are rotated 180 degrees and resized/padded to 224 by the original client.
+- State has 8 dimensions: end-effector position (3), axis-angle orientation (3), and gripper state (2).
+- Actions have 7 dimensions; training chunks contain 10 actions.
+- By default the client executes the first 5 actions and then replans.
+- `extra_delta_transform=False` matches this LIBERO adapter.
 
-## 归一化
+The historical real-loader check confirmed 329 episode IDs and 87,769 frames, including 658 episode-boundary samples. See `results/verification/loader_verification.json`.
 
-归一化仅使用 329 条训练演示，不使用 50 条验证演示。87,769=101×869，因此统计时仅在进程内将 batch 改为 101、num_workers 改为 4，完整处理 869 批，避免 drop_last 丢失最后一帧。
+## Normalization
 
-归一化的 batch=101 不等于训练 batch=2。历史归一化报告产生于训练配方仍是 batch=1 的准备阶段；后来正式训练改为 batch=2。报告内的时间点和字段应按阶段理解。
+Statistics use only the 329 training episodes. Since 87,769 = 101 × 869, statistics were computed with an in-process batch size of 101 and 4 workers over 869 batches, avoiding a dropped final frame.
 
-保存统计使用 quantile normalization，norm_stats.json 必须与训练检查点一起用于推理；不能用上游全量 meta/stats.json 代替训练集统计。
+Normalization batch size 101 is distinct from training batch size 2. The historical statistics report was produced while the preparation-stage training config still had batch size 1; the final run later used batch size 2.
 
-## 配方与实际命令
+The adapter uses quantile normalization. Inference must use the matching saved `norm_stats.json`; the upstream full-dataset `meta/stats.json` is provenance, not train-only statistics.
 
-源配方 num_train_steps 默认 10,000，正式命令用 --num-train-steps 40000 覆盖。学习率 decay_steps 仍为 10,000，没有随总步数扩大。
+## Configuration and actual run
 
-运行从 pi05_base 新建实验，而非从 20 步 smoke 检查点继续。完整实际参数与源码 SHA256 在 configs/experiment_record.json。
+The source config defaults to 10,000 steps. The actual run overrides it with `--num-train-steps 40000`, while the learning-rate decay remains 10,000 steps.
 
-采用官方 LoRA 变体及 freeze_filter。没有在本项目中逐个统计可训练参数，因此不宣称所有非 LoRA 参数均被冻结。
+Training starts as a new run from `pi05_base`, rather than resuming the 20-step smoke checkpoint. Actual arguments and source hashes are in `configs/experiment_record.json`.
 
-## 上游源码
+The official LoRA variants and `freeze_filter` were used. This project did not enumerate every trainable parameter and does not claim that all non-LoRA parameters were frozen.
 
-仓库提供固定提交与精确补丁。bootstrap_openpi.sh 会在指定目标目录拉取官方源码和子模块，再应用补丁；原本的本地运行目录不会被自动合并或移动。
+## Runtime source preparation
+
+`scripts/bootstrap_openpi.sh` fetches the pinned full OpenPI checkout, initializes its submodules, and applies the patch. By default that checkout lives at `/root/autodl-tmp/pi-libero/openpi`, separately from this reproduction repository.
+
+`scripts/stage_metadata.py` copies the split IDs and saved normalization into the runtime layout. No source-tree merging is required. See [Reproduction](reproduction.md).

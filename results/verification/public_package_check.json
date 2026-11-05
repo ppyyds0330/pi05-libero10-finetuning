@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "public_files": 67,
-  "public_file_bytes": 6071942,
+  "public_files": 74,
+  "public_file_bytes": 6104550,
   "credential_pattern_findings": [],
   "files_over_100_mib": [],
   "broken_relative_markdown_links": [],
@@ -24,7 +24,7 @@
   },
   "offline_data_and_evidence_check": {
     "status": "PASS",
-    "manifest_files_verified": 65,
+    "manifest_files_verified": 72,
     "train_episodes": 329,
     "held_out_episodes": 50,
     "overlap": 0,
@@ -41,8 +41,18 @@
   "historical_base_videos_sha256_verified": true,
   "readme_checks": {
     "diagram_direction": "TB",
-    "directory_section_unchanged": true,
+    "directory_section_updated": true,
     "weight_status_section_removed": true,
     "upstream_src_location_explained": true
+  },
+  "documentation_checks": {
+    "default_language": "English",
+    "language_pairs": 8,
+    "markdown_files": 16,
+    "local_directory_map_deleted": true,
+    "upload_instructions_removed": true,
+    "english_chinese_command_blocks_match_original": true,
+    "broken_relative_markdown_links": [],
+    "license_unchanged": true
   }
 }
