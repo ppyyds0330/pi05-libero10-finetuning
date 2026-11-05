@@ -1,0 +1,11 @@
+task,success,evidence,video
+put both the alphabet soup and the tomato sauce in the basket,False,historical_video_filename,media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_failure.mp4
+put both the cream cheese box and the butter in the basket,False,historical_video_filename,media/pi05_base/rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_failure.mp4
+turn on the stove and put the moka pot on it,False,historical_video_filename,media/pi05_base/rollout_turn_on_the_stove_and_put_the_moka_pot_on_it_failure.mp4
+put the black bowl in the bottom drawer of the cabinet and close it,False,historical_video_filename,media/pi05_base/rollout_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_failure.mp4
+put the white mug on the left plate and put the yellow and white mug on the right plate,False,historical_video_filename,media/pi05_base/rollout_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_failure.mp4
+pick up the book and place it in the back compartment of the caddy,False,historical_video_filename,media/pi05_base/rollout_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_failure.mp4
+put the white mug on the plate and put the chocolate pudding to the right of the plate,False,historical_video_filename,media/pi05_base/rollout_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_failure.mp4
+put both the alphabet soup and the cream cheese box in the basket,False,historical_video_filename,media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_failure.mp4
+put both moka pots on the stove,False,historical_video_filename,media/pi05_base/rollout_put_both_moka_pots_on_the_stove_failure.mp4
+put the yellow and white mug in the microwave and close it,False,historical_video_filename,media/pi05_base/rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_failure.mp4

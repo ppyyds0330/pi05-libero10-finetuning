@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-11-03T15:47:44.839943+00:00",
+  "experiment": "libero10_b2_s40000_20261103_234738",
+  "config_name": "pi05_libero10_lora",
+  "batch_size": 2,
+  "num_train_steps": 40000,
+  "learning_rate": {
+    "warmup_steps": 100,
+    "peak_lr": 2.5e-05,
+    "decay_steps": 10000,
+    "decay_lr": 2.5e-06
+  },
+  "save_interval": 10000,
+  "keep_period": null,
+  "seed": 7,
+  "ema_decay": null,
+  "action_horizon": 10,
+  "base_params": "/root/autodl-tmp/pi-libero/cache/openpi/openpi-assets/checkpoints/pi05_base/params",
+  "training_episodes": 329,
+  "training_frames": 87769,
+  "validation_episodes_excluded": 50,
+  "checkpoint_dir": "/root/autodl-tmp/pi-libero/checkpoints/pi05_libero10_lora/libero10_b2_s40000_20261103_234738",
+  "log_file": "/root/autodl-tmp/pi-libero/logs/libero10_b2_s40000_20261103_234738.log",
+  "gpu_csv": "/root/autodl-tmp/pi-libero/logs/libero10_b2_s40000_20261103_234738.gpu.csv",
+  "command_argv": [
+    ".venv/bin/python",
+    "-u",
+    "scripts/train.py",
+    "pi05_libero10_lora",
+    "--exp-name",
+    "libero10_b2_s40000_20261103_234738",
+    "--batch-size",
+    "2",
+    "--num-train-steps",
+    "40000"
+  ],
+  "git_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "source_sha256": {
+    "src/openpi/training/config.py": "7b01b5c80dca0dd02735b834700e6458627d8520a351871e9d741b4898a3f5f6",
+    "src/openpi/training/data_loader.py": "3f3a80c3566b59ff07c44217c314ef6bc3d515c651802e155a2b0f865ace0ef4",
+    "scripts/train.py": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf"
+  },
+  "start_mode": "new_run_from_pi05_base",
+  "resume": false
+}

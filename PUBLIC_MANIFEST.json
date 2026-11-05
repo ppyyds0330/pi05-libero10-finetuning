@@ -1,0 +1,330 @@
+{
+  "description": "Public project files; not model weights or raw training data",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 172,
+      "sha256": "070f07d7e4d11ff8ad33eaba751a0dcb27b3b2dd3fc181a0897adc7e56c75733"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 509,
+      "sha256": "3f7e7b6710e6b2643f4da1aa686b5f4d4c37f4369c54861f6137c36fe8c7b34e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11356,
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5810,
+      "sha256": "c93cd3b7224725771958e94bd17bcc2d56301870cecffbc509faf1c15ae50353"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1380,
+      "sha256": "b29e3d7d11eac28afc374ae541d36024329a9b796eb7d772bf971dc86dcedca5"
+    },
+    {
+      "path": "configs/experiment_record.json",
+      "bytes": 1611,
+      "sha256": "6ad21cbf9e1e9c794560885a82d10caab8b4cd41898d5b9e5834ac0518052c23"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 1005,
+      "sha256": "4222f9ed5a2b16953ef3e5f323d93be0ccc2176cbbd20449ec2bfb12975deb97"
+    },
+    {
+      "path": "data/splits/source_manifest.json",
+      "bytes": 143264,
+      "sha256": "4cac9ffb8159b232504d7d9b0c54ec8d1fa58cbc3cc97dc1385a4af408c20955"
+    },
+    {
+      "path": "data/splits/train329.json",
+      "bytes": 2210,
+      "sha256": "e26dcc4de3eb2bb31c15cdfe0d65833a4c00da74d1fbcfa54a9fb64b5b14eede"
+    },
+    {
+      "path": "data/splits/validation50.json",
+      "bytes": 339,
+      "sha256": "ea0e1df3f5fe1fcdae6fcc65a1a7912dea5bf49fbcc30a950fd81bc2524d9154"
+    },
+    {
+      "path": "docs/implementation.md",
+      "bytes": 2758,
+      "sha256": "137ff22cfdb8f34f6f33c9f17b05822199baf3dfdad3ad9f691ef26fed7a1424"
+    },
+    {
+      "path": "docs/local_directory_map.md",
+      "bytes": 1294,
+      "sha256": "4b6c59526f6b94cbb05c83ad67e284f3124cfeb4ac5ea8ef578ac512cafe24cc"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "bytes": 9315,
+      "sha256": "a6fb8265aded0c45d4517da44f92cbf6b006351350a093bba6df1c1c2546e547"
+    },
+    {
+      "path": "docs/results_and_limits.md",
+      "bytes": 2086,
+      "sha256": "af85de7acd1d20e5c9527dbe3a771a00c4119daf9383ebd8c61db91fab41eb90"
+    },
+    {
+      "path": "environments/client_packages.json",
+      "bytes": 6026,
+      "sha256": "e392cb5f4e37c4934564879214be58dcd47a4ee024970921c4a768798b4c9441"
+    },
+    {
+      "path": "environments/client_requirements_cpu.txt",
+      "bytes": 2923,
+      "sha256": "0bee0e1ed3b92931b28db400f81613bc587243633c7a6da25d327f228318a902"
+    },
+    {
+      "path": "environments/cloud_gpu_at_archive.txt",
+      "bytes": 1689,
+      "sha256": "dd732dcc33e34dcf3f8f6b34919f1a79dd63384c73229083806399745c3a4f1d"
+    },
+    {
+      "path": "environments/cloud_packages.json",
+      "bytes": 7983,
+      "sha256": "380d1fb57b543fcdd03859b1bf49bd4aaf4026a2d717adbf39f75f5406db2619"
+    },
+    {
+      "path": "environments/cloud_python.json",
+      "bytes": 237,
+      "sha256": "9a255ef8661aeca2099a294f51b1ff4f2e34c6d6a624ee055041fe91694749e9"
+    },
+    {
+      "path": "environments/cloud_requirements_freeze.txt",
+      "bytes": 3739,
+      "sha256": "e200d3cddf9ea795db0df0d9451b117cc51ba8175a32598f6aa854a173747ca9"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_success.mp4",
+      "bytes": 73746,
+      "sha256": "406a80882f0fcc2676a234228b856e4772ccefead0fb5dfbea4bf53574428d76"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_both_moka_pots_on_the_stove_success.mp4",
+      "bytes": 238630,
+      "sha256": "1b19db59649f3a667c9633ef37973529ad54aa21e66b2af25507bfff853fddea"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_success.mp4",
+      "bytes": 137625,
+      "sha256": "0ef90bff96b4d7bc0b18c1fe09108d97fbf8c8b95664187947f1c902c65ccbd5"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_success.mp4",
+      "bytes": 142878,
+      "sha256": "9cba8de2fd51973652703b394cd044433dc05b68b7840a09b57a142bb408acbd"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_failure.mp4",
+      "bytes": 336604,
+      "sha256": "b0b5362a430b4a94010ba2332ac64c1e35d735a90632b6ed18bb619066c3f143"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_success.mp4",
+      "bytes": 127459,
+      "sha256": "2bfd3df2e1722e7fad205c9a35cc9b38c1dab064a5c42e1042728bde60dabeeb"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_success.mp4",
+      "bytes": 129604,
+      "sha256": "226d677b2dfd6b5b20ba1bdedd9732415d8d5dbf704546da6ac6cf58f183c8c0"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_success.mp4",
+      "bytes": 157601,
+      "sha256": "40278ad854d0f3e1b7c6bd9c1a9b95ec40ffb0e451cbcc5bed46267146c2cfcb"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_failure.mp4",
+      "bytes": 199483,
+      "sha256": "b6d14c1bc7df3a6a8bb3f79199cc9ce1ff9fdbf81f9d5eb85b9eb2ce6e64fc5f"
+    },
+    {
+      "path": "media/finetuned_40000/rollout_turn_on_the_stove_and_put_the_moka_pot_on_it_success.mp4",
+      "bytes": 123718,
+      "sha256": "369e8449cf56135834cc6ea5b9689a50136d103d7a158e01aa2f84c456729cbc"
+    },
+    {
+      "path": "media/pi05_base/README.md",
+      "bytes": 611,
+      "sha256": "49170809ee7fc0789174036e80d6f19f35e08b69fd9ac9a9e6c68c5a2be04f66"
+    },
+    {
+      "path": "media/pi05_base/rollout_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_failure.mp4",
+      "bytes": 177634,
+      "sha256": "8fe00cef6a4bd0ad9dd29c83a28dc0fc19b3ea6a7e6e0b5f0ed8c1dab9e03187"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_moka_pots_on_the_stove_failure.mp4",
+      "bytes": 250911,
+      "sha256": "c8d5a4ea3e762e04130f1b4391ec4c89d893cf3a2cc8c948beff4e62267031fe"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_failure.mp4",
+      "bytes": 388482,
+      "sha256": "64773f09b7bb58428033b8c2a888e77f5e82a202757a4776e97f598b9b0cc46a"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_failure.mp4",
+      "bytes": 162267,
+      "sha256": "9c9428b38af86f70120a30d7488bc7306452263c18f7f8b15c8e48004934a7b0"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_failure.mp4",
+      "bytes": 169610,
+      "sha256": "f8b773791eaee8827ee78b260230010e11bac74d7095757af5f14fd0d2337720"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_failure.mp4",
+      "bytes": 286948,
+      "sha256": "945216e8451aa0ada880f276a9f99bf06d45e7f2489460cc340117d5e202256e"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_failure.mp4",
+      "bytes": 380078,
+      "sha256": "c227744d156d337ecb3b2ababb3269db6593b2e4c488797f4e2bc0971e7e98a7"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_failure.mp4",
+      "bytes": 361291,
+      "sha256": "d6e689f44532bc5730a2d736877246418facf0c3ffd9de7f7a5161f2ec97147e"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_failure.mp4",
+      "bytes": 73973,
+      "sha256": "20e6a08218b2c00ef5efe6906ab6ddddd977a54cb696cd403b180352de6aa430"
+    },
+    {
+      "path": "media/pi05_base/rollout_turn_on_the_stove_and_put_the_moka_pot_on_it_failure.mp4",
+      "bytes": 224617,
+      "sha256": "1b240960c50b8b3b67751d64d3af7f8f393834d3d60bbf95a54b2f3b9ea4d6b2"
+    },
+    {
+      "path": "patches/openpi-libero10-lora.patch",
+      "bytes": 4037,
+      "sha256": "284a39a65ce1c733adac657603939c7642278b0e8e2d4209022a260474d3470c"
+    },
+    {
+      "path": "results/logs/eval_40000.log",
+      "bytes": 6571,
+      "sha256": "0932483c7a6af005c6e97aa825670d8cc2cebb99c4ab9d24dc35a90c3f4321a8"
+    },
+    {
+      "path": "results/logs/normalization.log",
+      "bytes": 25045,
+      "sha256": "f5742c08d264e13bde6a261ff413ae9732b1fdf51c414dd66ca696281b852047"
+    },
+    {
+      "path": "results/logs/smoke_b1.log",
+      "bytes": 30964,
+      "sha256": "02fa8956f3197527c2f929c4d714a2cb1f559e4b9463c16e094d6954652540cb"
+    },
+    {
+      "path": "results/logs/smoke_b2.log",
+      "bytes": 31161,
+      "sha256": "554cda0ef865ddf8e448bb107d8925036e4585fe039a4584c482ee2069c118b6"
+    },
+    {
+      "path": "results/logs/train_40000.log",
+      "bytes": 443308,
+      "sha256": "9192de5c62893093a6985feb5093d34c632b78154f2725ed5e1c882f2a5d3316"
+    },
+    {
+      "path": "results/logs/train_gpu.csv",
+      "bytes": 1117734,
+      "sha256": "e3c762dc0866037a12b33913d27fc058fff8571f5c053ce7e12a94b4e64d4d43"
+    },
+    {
+      "path": "results/normalization/norm_stats.json",
+      "bytes": 1925,
+      "sha256": "6acb523d1d7f50932078fd515138764e77a5765227746de06e8f7c360b28322c"
+    },
+    {
+      "path": "results/pi05_base_summary.json",
+      "bytes": 2940,
+      "sha256": "432d80496e55cf963c4c6b7bac833508f755b656e96f97befdf60d6e83467d45"
+    },
+    {
+      "path": "results/pi05_base_task_results.csv",
+      "bytes": 1985,
+      "sha256": "3db56bf83d56ae40caabd02ca64f2671c10a548ccca163666509bf09803f9de4"
+    },
+    {
+      "path": "results/summary.json",
+      "bytes": 2185,
+      "sha256": "c81a8e289454de8f2de9dae7c4daa6b64895a80c8a773dc865e0bdc52590d6ad"
+    },
+    {
+      "path": "results/task_results.csv",
+      "bytes": 709,
+      "sha256": "72b8fb75c71268bc06de15220f22c3ead774e243279aa31c7a863b51969b1cf2"
+    },
+    {
+      "path": "results/verification/loader_verification.json",
+      "bytes": 5417,
+      "sha256": "8a342cb3b7e29f2b4cd866ba5807107806fec79dc0ac6e55b3e496c729786d77"
+    },
+    {
+      "path": "results/verification/normalization_reference.json",
+      "bytes": 1916,
+      "sha256": "300ed0a3bb2d54712b4a7159cc4fd6699aede6b7c07db95fe9fb54c040a123f0"
+    },
+    {
+      "path": "results/verification/normalization_verification.json",
+      "bytes": 1363,
+      "sha256": "fa5bccd497b1da1255573babf2df78dcbe31dddfd05feea6863db9caf9fc416d"
+    },
+    {
+      "path": "results/verification/smoke_b2_reload.json",
+      "bytes": 724,
+      "sha256": "a1bdde60f1f794cb9f9c29bd1dd5aef65f4c0f45b53e23baf0c6d7a33c420713"
+    },
+    {
+      "path": "scripts/bootstrap_openpi.sh",
+      "bytes": 1016,
+      "sha256": "2dd3f29e282f5ee59344a541369d0e17999292c479611a1e76977e1d020b97b2"
+    },
+    {
+      "path": "scripts/data/prepare_libero10.py",
+      "bytes": 11459,
+      "sha256": "57173f75d31b50b7bb6e56d41b97ffcb740d79813756957b880ff4dd53901608"
+    },
+    {
+      "path": "scripts/data/verify_libero10.py",
+      "bytes": 5206,
+      "sha256": "65653cd068a533b11d44bd1409c40a2cfdb21bc7d827958ece5f345cb530c9c7"
+    },
+    {
+      "path": "scripts/data/verify_train329_loader.py",
+      "bytes": 4985,
+      "sha256": "9c7fd6062375b3c92b157ece88e0e05fcc13abd7e056b78261d0ae522e9d07e0"
+    },
+    {
+      "path": "scripts/stage_metadata.py",
+      "bytes": 1719,
+      "sha256": "e464da3fa9bf528ee454799e756b66c19567257f3bc79a0e7788bb1de4338d49"
+    },
+    {
+      "path": "scripts/verify_project.py",
+      "bytes": 3970,
+      "sha256": "50b86bb20bcf638a74c2ee22f2b55cb232b3eaa40c8a8b81ca29805c612aff58"
+    },
+    {
+      "path": "upstream/README.md",
+      "bytes": 232,
+      "sha256": "49f037fa58a4fede12019eb25251fd53d1b1b29b768241ca65df51834028ecf2"
+    },
+    {
+      "path": "upstream.lock.json",
+      "bytes": 448,
+      "sha256": "9907a2fa8d5cdec8da7a46d92872357ffc40387b348755922cf1658799e980b2"
+    }
+  ]
+}

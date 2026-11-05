@@ -1,0 +1,15 @@
+{
+  "openpi": {
+    "url": "https://github.com/Physical-Intelligence/openpi",
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+  },
+  "libero": {
+    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+    "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "source": "OpenPI pinned submodule"
+  },
+  "dataset": {
+    "repo_id": "physical-intelligence/libero",
+    "revision": "a4336d589d589045d1c56423ffdf3b88a0e19b1f"
+  }
+}

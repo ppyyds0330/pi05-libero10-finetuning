@@ -1,0 +1,5085 @@
+{
+  "source_repo": "physical-intelligence/libero",
+  "source_revision": "a4336d589d589045d1c56423ffdf3b88a0e19b1f",
+  "suite": "libero_10",
+  "seed": 7,
+  "split_algorithm": "Python random.Random(7); shuffle sorted episode IDs in local suite task order; first 5 per task held out",
+  "all_episodes": 379,
+  "all_frames": 101469,
+  "train_episode_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    58,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    70,
+    71,
+    72,
+    74,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    83,
+    84,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    135,
+    137,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    180,
+    181,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    202,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    211,
+    212,
+    213,
+    214,
+    216,
+    218,
+    219,
+    220,
+    221,
+    222,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    250,
+    251,
+    252,
+    253,
+    254,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    292,
+    293,
+    296,
+    297,
+    298,
+    299,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    326,
+    328,
+    329,
+    330,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    343,
+    345,
+    346,
+    347,
+    348,
+    350,
+    351,
+    352,
+    353,
+    354,
+    356,
+    357,
+    358,
+    360,
+    361,
+    363,
+    364,
+    365,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378
+  ],
+  "validation_episode_ids": [
+    12,
+    19,
+    22,
+    30,
+    35,
+    46,
+    50,
+    54,
+    59,
+    69,
+    73,
+    79,
+    82,
+    85,
+    111,
+    120,
+    134,
+    136,
+    138,
+    150,
+    179,
+    182,
+    192,
+    201,
+    203,
+    210,
+    215,
+    217,
+    223,
+    230,
+    249,
+    255,
+    266,
+    279,
+    291,
+    294,
+    295,
+    300,
+    317,
+    325,
+    327,
+    331,
+    341,
+    342,
+    344,
+    349,
+    355,
+    359,
+    362,
+    366
+  ],
+  "task_counts": [
+    {
+      "suite_task_id": 0,
+      "source_task_index": 5,
+      "task": "put both the alphabet soup and the tomato sauce in the basket",
+      "total": 33,
+      "train": 28,
+      "validation": 5,
+      "train_episode_ids": [
+        8,
+        13,
+        26,
+        39,
+        71,
+        77,
+        92,
+        101,
+        102,
+        118,
+        132,
+        137,
+        156,
+        181,
+        199,
+        200,
+        219,
+        234,
+        238,
+        241,
+        260,
+        308,
+        334,
+        336,
+        340,
+        350,
+        352,
+        363
+      ],
+      "validation_episode_ids": [
+        69,
+        79,
+        291,
+        317,
+        359
+      ]
+    },
+    {
+      "suite_task_id": 1,
+      "source_task_index": 7,
+      "task": "put both the cream cheese box and the butter in the basket",
+      "total": 49,
+      "train": 44,
+      "validation": 5,
+      "train_episode_ids": [
+        17,
+        24,
+        42,
+        43,
+        53,
+        56,
+        60,
+        65,
+        76,
+        78,
+        91,
+        94,
+        116,
+        117,
+        119,
+        122,
+        128,
+        131,
+        165,
+        166,
+        172,
+        175,
+        183,
+        232,
+        244,
+        251,
+        273,
+        280,
+        284,
+        296,
+        305,
+        310,
+        320,
+        326,
+        328,
+        329,
+        330,
+        332,
+        333,
+        335,
+        347,
+        360,
+        370,
+        378
+      ],
+      "validation_episode_ids": [
+        12,
+        201,
+        215,
+        294,
+        344
+      ]
+    },
+    {
+      "suite_task_id": 2,
+      "source_task_index": 3,
+      "task": "turn on the stove and put the moka pot on it",
+      "total": 41,
+      "train": 36,
+      "validation": 5,
+      "train_episode_ids": [
+        6,
+        38,
+        40,
+        45,
+        48,
+        49,
+        66,
+        72,
+        87,
+        93,
+        95,
+        153,
+        162,
+        184,
+        185,
+        202,
+        218,
+        225,
+        239,
+        240,
+        243,
+        253,
+        259,
+        263,
+        272,
+        277,
+        278,
+        287,
+        292,
+        303,
+        321,
+        345,
+        351,
+        354,
+        358,
+        361
+      ],
+      "validation_episode_ids": [
+        50,
+        134,
+        150,
+        182,
+        203
+      ]
+    },
+    {
+      "suite_task_id": 3,
+      "source_task_index": 8,
+      "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "total": 35,
+      "train": 30,
+      "validation": 5,
+      "train_episode_ids": [
+        14,
+        15,
+        16,
+        31,
+        32,
+        36,
+        75,
+        89,
+        90,
+        97,
+        112,
+        144,
+        151,
+        155,
+        169,
+        177,
+        189,
+        198,
+        254,
+        262,
+        268,
+        274,
+        304,
+        319,
+        337,
+        338,
+        353,
+        371,
+        375,
+        377
+      ],
+      "validation_episode_ids": [
+        120,
+        192,
+        255,
+        300,
+        327
+      ]
+    },
+    {
+      "suite_task_id": 4,
+      "source_task_index": 0,
+      "task": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "total": 38,
+      "train": 33,
+      "validation": 5,
+      "train_episode_ids": [
+        0,
+        18,
+        33,
+        58,
+        88,
+        105,
+        107,
+        114,
+        121,
+        125,
+        129,
+        157,
+        167,
+        170,
+        190,
+        207,
+        211,
+        231,
+        233,
+        235,
+        236,
+        247,
+        257,
+        264,
+        267,
+        301,
+        307,
+        309,
+        315,
+        323,
+        343,
+        346,
+        367
+      ],
+      "validation_episode_ids": [
+        22,
+        85,
+        249,
+        295,
+        362
+      ]
+    },
+    {
+      "suite_task_id": 5,
+      "source_task_index": 9,
+      "task": "pick up the book and place it in the back compartment of the caddy",
+      "total": 41,
+      "train": 36,
+      "validation": 5,
+      "train_episode_ids": [
+        27,
+        28,
+        47,
+        55,
+        61,
+        64,
+        81,
+        103,
+        104,
+        109,
+        127,
+        133,
+        141,
+        147,
+        154,
+        158,
+        159,
+        180,
+        191,
+        209,
+        213,
+        227,
+        228,
+        229,
+        258,
+        261,
+        290,
+        298,
+        299,
+        311,
+        313,
+        348,
+        364,
+        368,
+        372,
+        374
+      ],
+      "validation_episode_ids": [
+        111,
+        136,
+        279,
+        349,
+        366
+      ]
+    },
+    {
+      "suite_task_id": 6,
+      "source_task_index": 1,
+      "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "total": 36,
+      "train": 31,
+      "validation": 5,
+      "train_episode_ids": [
+        1,
+        4,
+        5,
+        11,
+        21,
+        37,
+        52,
+        62,
+        68,
+        108,
+        110,
+        113,
+        130,
+        146,
+        152,
+        168,
+        176,
+        197,
+        206,
+        212,
+        216,
+        220,
+        224,
+        242,
+        248,
+        252,
+        271,
+        302,
+        322,
+        356,
+        369
+      ],
+      "validation_episode_ids": [
+        19,
+        138,
+        210,
+        325,
+        355
+      ]
+    },
+    {
+      "suite_task_id": 7,
+      "source_task_index": 4,
+      "task": "put both the alphabet soup and the cream cheese box in the basket",
+      "total": 43,
+      "train": 38,
+      "validation": 5,
+      "train_episode_ids": [
+        7,
+        9,
+        25,
+        29,
+        41,
+        63,
+        74,
+        83,
+        96,
+        98,
+        124,
+        135,
+        148,
+        160,
+        161,
+        163,
+        171,
+        174,
+        188,
+        195,
+        196,
+        205,
+        208,
+        221,
+        222,
+        237,
+        246,
+        250,
+        256,
+        265,
+        275,
+        281,
+        286,
+        289,
+        293,
+        297,
+        318,
+        373
+      ],
+      "validation_episode_ids": [
+        30,
+        82,
+        223,
+        266,
+        331
+      ]
+    },
+    {
+      "suite_task_id": 8,
+      "source_task_index": 6,
+      "task": "put both moka pots on the stove",
+      "total": 29,
+      "train": 24,
+      "validation": 5,
+      "train_episode_ids": [
+        10,
+        20,
+        23,
+        51,
+        57,
+        67,
+        70,
+        86,
+        100,
+        106,
+        115,
+        143,
+        149,
+        187,
+        194,
+        204,
+        214,
+        270,
+        283,
+        288,
+        306,
+        314,
+        316,
+        376
+      ],
+      "validation_episode_ids": [
+        46,
+        54,
+        73,
+        179,
+        341
+      ]
+    },
+    {
+      "suite_task_id": 9,
+      "source_task_index": 2,
+      "task": "put the yellow and white mug in the microwave and close it",
+      "total": 34,
+      "train": 29,
+      "validation": 5,
+      "train_episode_ids": [
+        2,
+        3,
+        34,
+        44,
+        80,
+        84,
+        99,
+        123,
+        126,
+        139,
+        140,
+        142,
+        145,
+        164,
+        173,
+        178,
+        186,
+        193,
+        226,
+        245,
+        269,
+        276,
+        282,
+        285,
+        312,
+        324,
+        339,
+        357,
+        365
+      ],
+      "validation_episode_ids": [
+        35,
+        59,
+        217,
+        230,
+        342
+      ]
+    }
+  ],
+  "metadata": {
+    "meta/info.json": {
+      "bytes": 2131,
+      "sha256": "77c0da93c67960bac803a8ea25dabf380d752c26c1d91c54151121dd10e7d82f"
+    },
+    "meta/tasks.jsonl": {
+      "bytes": 3375,
+      "sha256": "e72ef3cf7ca7a3abe70b3e142a0d1acf2719d2a3f27598869092cc4f1762bb99"
+    },
+    "meta/episodes.jsonl": {
+      "bytes": 180384,
+      "sha256": "0479a2ced6117700e4638a1da54dccd9f60ae5f47485ea6d91390c869befcf08"
+    },
+    "meta/stats.json": {
+      "bytes": 5855,
+      "sha256": "1fe6c2d548a7998394488ae68bc2be46a51c8cd3798af6ab74fff79f8b20e293"
+    }
+  },
+  "files": [
+    {
+      "path": "data/chunk-000/episode_000000.parquet",
+      "episode_id": 0,
+      "frames": 214,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 28009331,
+      "sha256": "1dff46a888aac51da3c4fedb6c6fe596df16f8cba47dd10d0e0c0ca565fd1d65",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000001.parquet",
+      "episode_id": 1,
+      "frames": 284,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 37414512,
+      "sha256": "6c416803bba7649172e6b3c0cb2c579a570fcb234e41249f7589c52809971916",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000002.parquet",
+      "episode_id": 2,
+      "frames": 345,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 35350193,
+      "sha256": "e590ad6f1f13e894d6e3a250ba54346b16803e873403061a7f0978903830d53d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000003.parquet",
+      "episode_id": 3,
+      "frames": 285,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 28709548,
+      "sha256": "c9be4cd08fcdc306e9e176cb8ce1da78460567d6c3b9e3b91ebc4842ffd126f1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000004.parquet",
+      "episode_id": 4,
+      "frames": 278,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 36229453,
+      "sha256": "f244b312166abe97d9b25b7b7d21a7ec9140929736fb59e55a757d6d9ac86ba9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000005.parquet",
+      "episode_id": 5,
+      "frames": 240,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31571376,
+      "sha256": "aa507af5ebe6b874a4f2d1ff78d7c02c48dd6fadef3efd86afb0556af71be02e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000006.parquet",
+      "episode_id": 6,
+      "frames": 279,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 33946834,
+      "sha256": "202f9eb18c0d4d0ff2fb398d1423d9a3c947801b6027c631f095a007017d1db2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000007.parquet",
+      "episode_id": 7,
+      "frames": 272,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36515760,
+      "sha256": "a8e0b399a4a625236792ed4e989f98406e1c4010469b336fc71d24bf5cf813ad",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000008.parquet",
+      "episode_id": 8,
+      "frames": 259,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 38264721,
+      "sha256": "746602605cf5b61ee0a0830094e452453d0e068283346b76eb66f3d201cdcd24",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000009.parquet",
+      "episode_id": 9,
+      "frames": 302,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 41008404,
+      "sha256": "17eee4d390ca83b77418823d07178224088a40f392b62b6fa00ceeab38196a04",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000010.parquet",
+      "episode_id": 10,
+      "frames": 383,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 42209473,
+      "sha256": "030c49e6d1907c8092e5ed2e6d7472e8ce00481e7ba442d582831f8163d0ee3a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000011.parquet",
+      "episode_id": 11,
+      "frames": 218,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 28512677,
+      "sha256": "e7ef0ad2feeec69dff35c87fee216acdf8d03c71f2ab36854ede1b8ba289eab8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000012.parquet",
+      "episode_id": 12,
+      "frames": 279,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 38292394,
+      "sha256": "52df2f981836316f361059970b096c45bea45e59c54152343189db68688a349d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000013.parquet",
+      "episode_id": 13,
+      "frames": 285,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 41417765,
+      "sha256": "4cd7c3d6f1aa77d30096526326efed87d54021949c6ed1f6427f102c72b9f1b7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000014.parquet",
+      "episode_id": 14,
+      "frames": 257,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 30907484,
+      "sha256": "8cec14466bc6a51dd3fb3355a0387e4c29af12355bfc2b4a3e5c9cf52a5d653b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000015.parquet",
+      "episode_id": 15,
+      "frames": 242,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29540896,
+      "sha256": "75bea5d65ac14a7e92382af713d7423fdc3433a8c0ad848124c8d83790c8296e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000016.parquet",
+      "episode_id": 16,
+      "frames": 248,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 30337055,
+      "sha256": "3e719b3cb732371d25674cbc5f6e2a0febf0778b8487a2716f866511342d875c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000017.parquet",
+      "episode_id": 17,
+      "frames": 249,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35286566,
+      "sha256": "a6f6045463de99ba74582624db0c87dbce9e85702d9ce54f6d3ea728eef0c1b8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000018.parquet",
+      "episode_id": 18,
+      "frames": 276,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 35545404,
+      "sha256": "f23e1b08bb58a6cd8e73a9a6e038425886e64aa0f50f1a6dfc06b65176ca6a18",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000019.parquet",
+      "episode_id": 19,
+      "frames": 249,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 33382311,
+      "sha256": "6ce6da66d57ca6fbd0b691f8f8cf7a21f5b596d130a17aed578d2605bd9b5d01",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000020.parquet",
+      "episode_id": 20,
+      "frames": 359,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 39422672,
+      "sha256": "81797695ff88ff3b340a60211440cd2f8a9044fb6d5cd27f2c37bf5b2a9758b2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000021.parquet",
+      "episode_id": 21,
+      "frames": 264,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 34420764,
+      "sha256": "8c0a0a41f8a2301f4d00228efc0072234887f5606a1707b5de1c4e645862d437",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000022.parquet",
+      "episode_id": 22,
+      "frames": 263,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 33538946,
+      "sha256": "1358af86440068a74190297b82e3c9152ec188ff3243cc43c60da44a107da502",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000023.parquet",
+      "episode_id": 23,
+      "frames": 455,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 51207217,
+      "sha256": "81f8cc4d60e29a07647971f8d5d526581351320bc1d10075e0f575b8ba87908e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000024.parquet",
+      "episode_id": 24,
+      "frames": 241,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34055476,
+      "sha256": "42ab928ffac9fb371fe6c037ac60067832c19243131dd67adf3043e6cc8328c3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000025.parquet",
+      "episode_id": 25,
+      "frames": 255,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 34741173,
+      "sha256": "11ff6fb8b733787e093fa2d2457ea6fe1eccd7793249522433c58843f5be408c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000026.parquet",
+      "episode_id": 26,
+      "frames": 296,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 42961432,
+      "sha256": "a60e9601d02eed5acf1cdb920db1e55e34e7dc422ba52567143d2c0fe927b1b0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000027.parquet",
+      "episode_id": 27,
+      "frames": 234,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 27534644,
+      "sha256": "46e23143129f9b7e17c9e496e250ef0d1370b296c67b23e8d4dac7d79687b274",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000028.parquet",
+      "episode_id": 28,
+      "frames": 195,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 23212127,
+      "sha256": "897a5ad75fa5989b97247b8156d84d7d65cbd2bf089ed23c8406fe7731fa0d88",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000029.parquet",
+      "episode_id": 29,
+      "frames": 288,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 38649368,
+      "sha256": "7dd632e9f820041bd871855cd3204612da391c64eaad66e298c9431e35605f03",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000030.parquet",
+      "episode_id": 30,
+      "frames": 284,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 38147820,
+      "sha256": "b64e09067a9bb6f504995e278c479b62a58af0d4befc10cf84b01700158668a6",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000031.parquet",
+      "episode_id": 31,
+      "frames": 241,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 30096817,
+      "sha256": "4eae4fdd60f20b42471b4f271aa577b6f5ee7050d92d31e5333eebb460867a29",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000032.parquet",
+      "episode_id": 32,
+      "frames": 229,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28912850,
+      "sha256": "466e3c1ea2ce01196330f1261730992a6003db1299b1526d794b02f77412fcdf",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000033.parquet",
+      "episode_id": 33,
+      "frames": 259,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 32983959,
+      "sha256": "1c0bbbf0bd2e92993030d340912a55028bd620b5bfd887787afd467a23785297",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000034.parquet",
+      "episode_id": 34,
+      "frames": 449,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 45406884,
+      "sha256": "9a0fb12e42233ab76bdd77b26612bef957a035a81763c5cff7b447053897fcb1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000035.parquet",
+      "episode_id": 35,
+      "frames": 353,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 36004035,
+      "sha256": "52d1eff37ee1415c81a49d2f169fc451340b1f8283fbec76dc479152808a6f0f",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000036.parquet",
+      "episode_id": 36,
+      "frames": 240,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29746321,
+      "sha256": "4c6d413f09a2b9ddd455846a1a566bb6ca61e16462e2d977e5603505124bae87",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000037.parquet",
+      "episode_id": 37,
+      "frames": 246,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 32397548,
+      "sha256": "38d33a22878bf8c4df4384b78e8ba6a892948e2333dea2741fc575906e3ae3fa",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000038.parquet",
+      "episode_id": 38,
+      "frames": 261,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32156973,
+      "sha256": "de8893bce1aa89c60c49d7f53ec87b1fbab491b778705d09a49fd0abf9d41c0f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000039.parquet",
+      "episode_id": 39,
+      "frames": 288,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 41905447,
+      "sha256": "6678af0027e615364507fa39190262cc5e3ca85787868dc4105cd032dec5adc1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000040.parquet",
+      "episode_id": 40,
+      "frames": 228,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 27419494,
+      "sha256": "b05a5e7d00851c49dfef43656aacc89572c68b45b15a5a949715dfccd083c53b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000041.parquet",
+      "episode_id": 41,
+      "frames": 236,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 31435651,
+      "sha256": "969d83abda83ebcdccf76e719d9a001d9feb4a9961ddac95441ac998b88d83d7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000042.parquet",
+      "episode_id": 42,
+      "frames": 244,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34930905,
+      "sha256": "b52594317139ce791ce2c5234dd686ac0de4bfd353ee3f7647c5cd798894ef50",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000043.parquet",
+      "episode_id": 43,
+      "frames": 272,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 37200262,
+      "sha256": "926442239a805f7dff7f1cacf2b90905e70d422febc849d2dbe582894c0eb883",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000044.parquet",
+      "episode_id": 44,
+      "frames": 267,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27317451,
+      "sha256": "930d4e52570135ff1697cfee74bf910de824d6d8e957dfca453a2206a68c7314",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000045.parquet",
+      "episode_id": 45,
+      "frames": 267,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 33128665,
+      "sha256": "ea80b907c1c11c85c90cad4f2b5abf3c4830f092e9befc1794ce14a009882015",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000046.parquet",
+      "episode_id": 46,
+      "frames": 409,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 45809213,
+      "sha256": "410c31794e4595f3b05be43f435effec92993e78fef7df4c24a80267c4ce805d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000047.parquet",
+      "episode_id": 47,
+      "frames": 182,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22030156,
+      "sha256": "1483262417a22120d50c90c724f8c1c4a90931f2a8dcae79125754fb1e9f2173",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000048.parquet",
+      "episode_id": 48,
+      "frames": 278,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 33282394,
+      "sha256": "cdbda85c393d827f2e482779efd6e377f9c5beb9238cd12449aacf8e618f61c6",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000049.parquet",
+      "episode_id": 49,
+      "frames": 308,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 37658627,
+      "sha256": "f225ce109478dcba4791c0a2f1c7f4d0778d29ced028e4ebc078b9ad54e8d65d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000050.parquet",
+      "episode_id": 50,
+      "frames": 290,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 35006848,
+      "sha256": "83867f3510ac502eb7631ba2746c9b40a6928e5a61c1a9f71e45c7fa9bc0111d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000051.parquet",
+      "episode_id": 51,
+      "frames": 404,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 44949878,
+      "sha256": "9a9e6807b1a10f86f97fc05d28e57b1f1de336abc93f2e33b19c7f541b2419f8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000052.parquet",
+      "episode_id": 52,
+      "frames": 237,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31029473,
+      "sha256": "0eae5407a9d6e391f8c16fda392cba3197631276b60ea947807bf9c7bb234eb0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000053.parquet",
+      "episode_id": 53,
+      "frames": 242,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34327195,
+      "sha256": "aa37c7a189cdf7925a37e27a734e0d5d9ce8cae053accc18d11a7cdc79f18f5d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000054.parquet",
+      "episode_id": 54,
+      "frames": 401,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 44590292,
+      "sha256": "726d0fb2ed1f94509a48db3cf5c4025071088079dba17ffedb884ebeb92c93ee",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000055.parquet",
+      "episode_id": 55,
+      "frames": 178,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21111307,
+      "sha256": "c107ba0518520c9cbe7e13162da7df1f735a798199017c443b69e3b0d6fcea1e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000056.parquet",
+      "episode_id": 56,
+      "frames": 310,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 42462255,
+      "sha256": "65f6a25b4bf5dd47085b51058a0fbfc74bfd0a4d99c7c1f248d21cbb1472ebd6",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000057.parquet",
+      "episode_id": 57,
+      "frames": 368,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 41851647,
+      "sha256": "abff0a096e843496495fc15898135ef68f47840c42fed41f959d5f521670d545",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000058.parquet",
+      "episode_id": 58,
+      "frames": 253,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 32468021,
+      "sha256": "8e6eb5edd8afdb712db8368b37726ac81c347d2debf19f5855ffd572b5b678be",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000059.parquet",
+      "episode_id": 59,
+      "frames": 224,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 22825228,
+      "sha256": "cfe5a3768ea5c5d73ca045d70ce0568d60a0596f2f4df99b31fa21a196f749a4",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000060.parquet",
+      "episode_id": 60,
+      "frames": 250,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34858623,
+      "sha256": "2bb8e329aeea7e5f46d9270f1e8a8e2cde2bb13fd3524b40537a2997e6899436",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000061.parquet",
+      "episode_id": 61,
+      "frames": 180,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21494254,
+      "sha256": "c49a001ed6d9e8fab523d9e6064302916b28c532b253fc7097dbc9e0754df7b5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000062.parquet",
+      "episode_id": 62,
+      "frames": 251,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 33267205,
+      "sha256": "f8ac0b099fbd2a76dd70c8a32c33cd121f12f4823281518723de9c47d6983dfa",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000063.parquet",
+      "episode_id": 63,
+      "frames": 248,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33174221,
+      "sha256": "1c4f0439a77de7e7a68e2334701d85d117ca9167f7771a23e5b2f3c0b131dd83",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000064.parquet",
+      "episode_id": 64,
+      "frames": 189,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22325499,
+      "sha256": "a944608ac6d4b2fadce09d82ed562cd1050fea3496267b28cc062f0e9a162d23",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000065.parquet",
+      "episode_id": 65,
+      "frames": 255,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35515880,
+      "sha256": "4b14d839790908183a7f8f3297343a48570b2d49a8a25d572a4d953563f7fb7f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000066.parquet",
+      "episode_id": 66,
+      "frames": 248,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 30910706,
+      "sha256": "c764f31509de81d385611d78ce03b18e75f120cc7a7fc0f62f3dcd6fb6742e1c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000067.parquet",
+      "episode_id": 67,
+      "frames": 388,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 43045285,
+      "sha256": "8819437ac0d8d3a76651a9b0c385888f452afb09d5ffff90ffbe1c81b2f2642d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000068.parquet",
+      "episode_id": 68,
+      "frames": 289,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 38425936,
+      "sha256": "e8d9be5c8e82f7e42623176868f0652d0e802d488c4f58333e8eec8131ef2591",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000069.parquet",
+      "episode_id": 69,
+      "frames": 292,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 42038114,
+      "sha256": "ca5859197e7e425ada0d577e288420ef879bb3609ab521533593cd97dd41961f",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000070.parquet",
+      "episode_id": 70,
+      "frames": 416,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 45012095,
+      "sha256": "425b0ca7fa18d8bf5c8cc03acfb4758f123bb6a0fc6292650e25875e1942427c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000071.parquet",
+      "episode_id": 71,
+      "frames": 312,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 45407243,
+      "sha256": "a4386b1dd9bd306d09cafd32f0a8a599f4367cb42deb50e3e2d959758d08edc8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000072.parquet",
+      "episode_id": 72,
+      "frames": 271,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32885904,
+      "sha256": "0a82cd4d18e83686fafddee82d479163f67c7cfb60047e67940f1e67f1033500",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000073.parquet",
+      "episode_id": 73,
+      "frames": 450,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 49569161,
+      "sha256": "67d9d99a1fe7ae1cffb61450b9a8df7f7abc6d1e8de82e376a4f123c57e378e0",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000074.parquet",
+      "episode_id": 74,
+      "frames": 264,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36107541,
+      "sha256": "6f7019c44761a2de89834e0ab7ded961cfe7589eae76d13dbc0d9eb924e68311",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000075.parquet",
+      "episode_id": 75,
+      "frames": 240,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29654304,
+      "sha256": "8a332a3ffa24f8349cd52fd066149541eb816f1dea7d5c12e28dcb63ad05640b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000076.parquet",
+      "episode_id": 76,
+      "frames": 278,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 37455715,
+      "sha256": "435cbff9f8ab606ecc7c4b820bb277bbd77f4d9e661b55d85b1a3b42721961ec",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000077.parquet",
+      "episode_id": 77,
+      "frames": 300,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 43074600,
+      "sha256": "4542c5a0377605a90cf87f0404026b8d3e4180bc30e47296d8469a90c322e82c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000078.parquet",
+      "episode_id": 78,
+      "frames": 271,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 37559314,
+      "sha256": "cc588da6f8f5032be40b6604337a9cbdee59aa193623b9cb22140a43cb255b89",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000079.parquet",
+      "episode_id": 79,
+      "frames": 274,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 38982357,
+      "sha256": "597b67772a602e7cf9c6553544ab9ec82e523bb6a223821454d350e44d446e0f",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000080.parquet",
+      "episode_id": 80,
+      "frames": 239,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 24274460,
+      "sha256": "e9340690c1738d0693fed85640399b44c75cdab6ae65b347b157e9c9688a03e4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000081.parquet",
+      "episode_id": 81,
+      "frames": 174,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21125278,
+      "sha256": "8b423e1e0e7d78d0c62e33ca1c49d7f7c6cf871b200aa0f67d360f2cd680334c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000082.parquet",
+      "episode_id": 82,
+      "frames": 290,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 39388534,
+      "sha256": "8ba5ce891da108248ba6e500dfb1e00fa624801d3c62b6fb41863922c41cfbe9",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000083.parquet",
+      "episode_id": 83,
+      "frames": 292,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 39850052,
+      "sha256": "35b79055b08ce78167d31482656782bfe3c0ba4b342c4607697e962b070fc9fe",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000084.parquet",
+      "episode_id": 84,
+      "frames": 247,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 25169701,
+      "sha256": "178a680a83b0bdcf043c86742a11212405b769ca372a70cfc23fb98e813a9c37",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000085.parquet",
+      "episode_id": 85,
+      "frames": 292,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 37366438,
+      "sha256": "26689b5355aa3cd36e19bd0a7fdaa8de250e0046aa5f0aca0e2c05714bee657d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000086.parquet",
+      "episode_id": 86,
+      "frames": 421,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 46724170,
+      "sha256": "7506f8ecca3be367907a68dbcb5b598f8274339217d7f6430fde8cb9cd8f76f2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000087.parquet",
+      "episode_id": 87,
+      "frames": 263,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32331026,
+      "sha256": "09d12521c48b62d1c4bcc60e1c43181777622b35ed452aff42567f0197ffaaab",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000088.parquet",
+      "episode_id": 88,
+      "frames": 269,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 34291098,
+      "sha256": "0407cfcee4b76bc19cca07d6baf8e21c661748af3edbbcddae0fc9c04b250e97",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000089.parquet",
+      "episode_id": 89,
+      "frames": 229,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28231686,
+      "sha256": "c135bd84bd6bca3e98cd49b0b894f6b909ae131f8d518a8edbc4272a6f0506db",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000090.parquet",
+      "episode_id": 90,
+      "frames": 223,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 27711703,
+      "sha256": "ea0f892eead00bd86fcc6b21292996ad35743d161532773f0674541618321f9e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000091.parquet",
+      "episode_id": 91,
+      "frames": 258,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35802715,
+      "sha256": "f9c95b9aefc94dc05f9e0498f67f48121dcff08752bed43a56ffab38d58ea220",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000092.parquet",
+      "episode_id": 92,
+      "frames": 280,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 39857456,
+      "sha256": "7453c613c81882366cc7196d45016c605a96ca4622ac1dbca5a765b86a8cc45a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000093.parquet",
+      "episode_id": 93,
+      "frames": 235,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29094307,
+      "sha256": "5cff3c975ba83c67485d9488c6edfebb5761bdbd4f1adbea3cef44dfa45f5b36",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000094.parquet",
+      "episode_id": 94,
+      "frames": 257,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35911283,
+      "sha256": "8f73d68d5ba69f2a18fdcac19200b880a2b46208c5d16b0dd76b322c51f2032b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000095.parquet",
+      "episode_id": 95,
+      "frames": 242,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29297508,
+      "sha256": "89223cdc5131a59eb790a908f02026c5fc93500184825fc7b649fb08476b3893",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000096.parquet",
+      "episode_id": 96,
+      "frames": 280,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 38150158,
+      "sha256": "e3996c7fc854c6d7bc064363c1e2f286fa363c631c97301a3312c7091c764297",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000097.parquet",
+      "episode_id": 97,
+      "frames": 249,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 31224294,
+      "sha256": "5e548432df74098ac121bac8492d89845c1d79deed0786d6e9992ec6e185dea5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000098.parquet",
+      "episode_id": 98,
+      "frames": 285,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 39150678,
+      "sha256": "f7d1ec43da218450e9fd5b543543b39d2eea64580250a2dd9562e28e1ca8b9bf",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000099.parquet",
+      "episode_id": 99,
+      "frames": 288,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 29752925,
+      "sha256": "7228693c8362b6c89edf21bc28859ed2647ed68e0a5187b6c7cea56032cce0ef",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000100.parquet",
+      "episode_id": 100,
+      "frames": 392,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 42974126,
+      "sha256": "78d246b26f98ed93d1daf55b24a0bef7d8a57a87b8c54c5f4f778eeda78d6d16",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000101.parquet",
+      "episode_id": 101,
+      "frames": 278,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 40000325,
+      "sha256": "2591aa73dccee83247c7bca10f6a5cfadd04ccfcebc60ff213508136223561e9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000102.parquet",
+      "episode_id": 102,
+      "frames": 317,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 46410480,
+      "sha256": "1093055ae0e3291e170d626a0bd106596caf03e14793b2ec4c0f3f38acd76360",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000103.parquet",
+      "episode_id": 103,
+      "frames": 184,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21774451,
+      "sha256": "02d1944ac0592e9b7e3c98ea48223d387390f2267c6d83049956a950d4181212",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000104.parquet",
+      "episode_id": 104,
+      "frames": 189,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22632516,
+      "sha256": "a9eb6655455b4666206d4c8e0472ed609ebc0258ef0f990ebb97a41d3b256604",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000105.parquet",
+      "episode_id": 105,
+      "frames": 237,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30162598,
+      "sha256": "f7b0daf3199ae301aeffc02feef8b7d90be235501939045d839e8f6c6340ef00",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000106.parquet",
+      "episode_id": 106,
+      "frames": 436,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 48270529,
+      "sha256": "a986fc2e81f561cf837a82ae7a4cee24b3939678891bc89ac3395646b7f74309",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000107.parquet",
+      "episode_id": 107,
+      "frames": 237,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30647811,
+      "sha256": "13d5ecb8277cc2d21e622a2f786e7f593ff9ed60369b7e44ae76af65db2a96b5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000108.parquet",
+      "episode_id": 108,
+      "frames": 242,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31846194,
+      "sha256": "048b26550c9b84f7b00ea68b57cedd8536792e8c3c978e2c6ccfc71f37bac969",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000109.parquet",
+      "episode_id": 109,
+      "frames": 167,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20195380,
+      "sha256": "0d64331466de67e8ed233b351a4d8ad35e12b1a3516123714e6041c3b35fa966",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000110.parquet",
+      "episode_id": 110,
+      "frames": 246,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 32120058,
+      "sha256": "f8b2fc89cea69d0b24c113d837dcc3018b3ebfec831c2b0d6c15dd8dbe3cf52a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000111.parquet",
+      "episode_id": 111,
+      "frames": 202,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 24344819,
+      "sha256": "68beb1c6ff545b7e98db6faabb05b711d7ba919c6eb8ac3b4e1900fa27244132",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000112.parquet",
+      "episode_id": 112,
+      "frames": 263,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 33558868,
+      "sha256": "d850c630a4a29c37ecb2585987a6b766deb724ff6bff0d4267399190e8510ff0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000113.parquet",
+      "episode_id": 113,
+      "frames": 247,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 32433607,
+      "sha256": "0b97977ea35e0b101663cd25c88f3bec8b67de49be7474048c8e06d19287a7b3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000114.parquet",
+      "episode_id": 114,
+      "frames": 266,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 33960869,
+      "sha256": "09ae1de6884b1fa6d62a45f117017c4dd743dd673ce8fe17428cb397d1bb9d71",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000115.parquet",
+      "episode_id": 115,
+      "frames": 373,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 41568343,
+      "sha256": "7311b8911fa51322739bccdca700d60f53d869f32601338a3bb9444fbabdac18",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000116.parquet",
+      "episode_id": 116,
+      "frames": 262,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 36349319,
+      "sha256": "7522a7bbede82d76406f91dcb67ffc5103d627b8db350a9bfcc8fe2a7d4f51d4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000117.parquet",
+      "episode_id": 117,
+      "frames": 258,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35691369,
+      "sha256": "56e0d856a5e486ba3d88925d1e32be4b92d763b358b632f92b86e20b21a9e242",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000118.parquet",
+      "episode_id": 118,
+      "frames": 268,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 38997639,
+      "sha256": "0808b6863c4b51bd888353f277a17c818fd28fd9437b1f873fc26d6e015efefd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000119.parquet",
+      "episode_id": 119,
+      "frames": 247,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34397674,
+      "sha256": "fe2d67ce7e36dcb3bf7ef9474db06ef3b62ab8b497486097da454a7251720892",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000120.parquet",
+      "episode_id": 120,
+      "frames": 236,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29421477,
+      "sha256": "f5127f9cbcf895b9cd2a5dd04942c04889640bdaccd102f71f7a8ef706cc6d75",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000121.parquet",
+      "episode_id": 121,
+      "frames": 292,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 37556487,
+      "sha256": "baa156c87c6755acb98c76cbba26e09815d9e54f383e23f5d33e8ecb0b2b619f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000122.parquet",
+      "episode_id": 122,
+      "frames": 276,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 38583671,
+      "sha256": "a9c8cb1ee892e4a9f7ca3986f7adf4d8ade91f41fb5968d7298b530d4a1e0a18",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000123.parquet",
+      "episode_id": 123,
+      "frames": 317,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 32463797,
+      "sha256": "87f4e63454b019ceb3f3d5a0302222a356d3658d7284917713b00d185856ede8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000124.parquet",
+      "episode_id": 124,
+      "frames": 219,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 29206872,
+      "sha256": "fd00043d907a4b4acf54d7ac37e589c640fe2a15b0709d4720b5b48a54f6804e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000125.parquet",
+      "episode_id": 125,
+      "frames": 242,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 31461254,
+      "sha256": "32ae9d24ff2526679cbafe2d9087bde34af416701749823839e4dec648340ced",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000126.parquet",
+      "episode_id": 126,
+      "frames": 293,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 29429806,
+      "sha256": "1f74ac4e54f65e77b648d81bd296688de20961f44b91f4aa0efba5869b021cc1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000127.parquet",
+      "episode_id": 127,
+      "frames": 190,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22434043,
+      "sha256": "059d64936c45511d83297c0dd7839596d2ee40ef4157e30ee67b6aa6e729b9c0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000128.parquet",
+      "episode_id": 128,
+      "frames": 254,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35606994,
+      "sha256": "a9670c5baeef5f0638c9f793d552a9898ad760b46630f050ccfa3828dd485778",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000129.parquet",
+      "episode_id": 129,
+      "frames": 250,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 32256469,
+      "sha256": "2825cb190eb801656f0f3b064d9c00ff5d93bf6f9a96de852cf7e307dad5474f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000130.parquet",
+      "episode_id": 130,
+      "frames": 228,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 29923126,
+      "sha256": "931b9388bd446d1541c509e9d3d757fe77e979e4395a7d18fa4cd340fa7431f4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000131.parquet",
+      "episode_id": 131,
+      "frames": 237,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 33211327,
+      "sha256": "c0ccd25c2b16a3313a25732228d78cff6b80b493cd77e39e8727685372fff4c2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000132.parquet",
+      "episode_id": 132,
+      "frames": 312,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 45257566,
+      "sha256": "ba7466fc600ae538f218b7a0a29cfdcbc9c0eca369cf17038f541a361be0e9f5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000133.parquet",
+      "episode_id": 133,
+      "frames": 181,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21291834,
+      "sha256": "27a03c1b311038599f48f9a347611becd7b63ac32b241c52472d63d30ab54642",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000134.parquet",
+      "episode_id": 134,
+      "frames": 262,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 31697440,
+      "sha256": "75417097d26c003121854acf8022cc8b4a848136087de9ba5b406d33c788d9ee",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000135.parquet",
+      "episode_id": 135,
+      "frames": 250,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33525908,
+      "sha256": "08f799794fd7210f7ee0157fbeb5ef32de67099f8bbc00f053733e042dab6248",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000136.parquet",
+      "episode_id": 136,
+      "frames": 172,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20462950,
+      "sha256": "671c22ce46852f9c36f6d75f991fa79ca80695034446810d5a23af0cb85bcb1f",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000137.parquet",
+      "episode_id": 137,
+      "frames": 317,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 46364292,
+      "sha256": "849d582f964b2b66dda5157c903f5b8c4e50029718a503e4a073b2de98836888",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000138.parquet",
+      "episode_id": 138,
+      "frames": 220,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 28812345,
+      "sha256": "fb4d64937cdb937dd301ce778da1cfcd4370d7ec0214707d22a4e7e1ad382769",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000139.parquet",
+      "episode_id": 139,
+      "frames": 286,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 29032936,
+      "sha256": "a284b890ffee9ca8593aab4e4a650fed2021b6895e7b17bcac72b8e43cddb7ce",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000140.parquet",
+      "episode_id": 140,
+      "frames": 312,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 32077317,
+      "sha256": "fbc318354c91fc1375445ea239573fd8f71ba57ef657b0cbdd6e7e1dc153acd3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000141.parquet",
+      "episode_id": 141,
+      "frames": 173,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20373697,
+      "sha256": "312cde78f07ca57061b6ffced7a81f616f16c0e5f22b96a125a242a8e575afc5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000142.parquet",
+      "episode_id": 142,
+      "frames": 300,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 30263929,
+      "sha256": "d6ab13e6f2dba4a974d277c6d4471776591f9c64c51500d20233d1175321293a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000143.parquet",
+      "episode_id": 143,
+      "frames": 419,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 46946560,
+      "sha256": "c7f53b8aab7f3825ae23b43030ad85a998b695f2c3fd3d1ac4a69b2caa21241a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000144.parquet",
+      "episode_id": 144,
+      "frames": 284,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 35650447,
+      "sha256": "6ca349a27f19ad624c8babd9e4b1d82b76be3682d1be5877bd2c13562a0ebc29",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000145.parquet",
+      "episode_id": 145,
+      "frames": 255,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27211131,
+      "sha256": "81f592f432e73b3b5c99d963b84f90ba2388620013e3809a0aba48b5e9e9cf64",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000146.parquet",
+      "episode_id": 146,
+      "frames": 278,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 36266543,
+      "sha256": "617aa3adfc6cc5f55b6e433192d64286adb94be00c45a1eafe2a2f4b726f7616",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000147.parquet",
+      "episode_id": 147,
+      "frames": 199,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 23534644,
+      "sha256": "709b437f988e984704e1362a3096f9208de4ffb0e70d836b8fa50d8a9607327a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000148.parquet",
+      "episode_id": 148,
+      "frames": 289,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 39706631,
+      "sha256": "cc66a7340af171840cb532479b80d1183fb5cb7739e6681b0c6c5050464ebdf9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000149.parquet",
+      "episode_id": 149,
+      "frames": 373,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 41490973,
+      "sha256": "2d5cb709c235e825b854c337b4885e7ec440e151177504493ad89957130e2f46",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000150.parquet",
+      "episode_id": 150,
+      "frames": 298,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 36653802,
+      "sha256": "a0163d1bd4b2b1703b3e6da943757b90facf36dd1671b580d00a17c982ba9190",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000151.parquet",
+      "episode_id": 151,
+      "frames": 217,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 27529070,
+      "sha256": "aab536b342e1fa372e044561e5a698aeb9f1427d21683b12310eab448b5d5a3d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000152.parquet",
+      "episode_id": 152,
+      "frames": 226,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 29932122,
+      "sha256": "376c0b1c626efcff447bafb4ae45e69bb6d34dd1f9afb70dba2d6b958f353164",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000153.parquet",
+      "episode_id": 153,
+      "frames": 255,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 31378903,
+      "sha256": "28b87eade218c865da435d9e1ae2551fbac39708d80e05bb37ee4d15fcf160cf",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000154.parquet",
+      "episode_id": 154,
+      "frames": 244,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 29022058,
+      "sha256": "8b2f53146afc428c2debf19cd5cd2366a97a325bbae7884eb6c94f6b3b0f1261",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000155.parquet",
+      "episode_id": 155,
+      "frames": 267,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 32903972,
+      "sha256": "188a17a002b73c7caa51cbd6fa584822d326854dacd8e85eeed53916eddef066",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000156.parquet",
+      "episode_id": 156,
+      "frames": 255,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 36504945,
+      "sha256": "083e636e14187f696154e75b270ff67335f12ddf99fc6c3f37211d6369085ed5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000157.parquet",
+      "episode_id": 157,
+      "frames": 224,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 28472651,
+      "sha256": "ba1b7a355bef88db059cf334cdbfd1f75925f0f6ba013e5a45baec56a80c16eb",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000158.parquet",
+      "episode_id": 158,
+      "frames": 211,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 24810259,
+      "sha256": "b1d5635151747cb6f500203b5dc3a0d5b76a1140d1648919cb476a7a826f903c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000159.parquet",
+      "episode_id": 159,
+      "frames": 165,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19769470,
+      "sha256": "cc16c19dc8be2663406f66327122ba3d70d794f31f668a6631a54671bbab38d3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000160.parquet",
+      "episode_id": 160,
+      "frames": 258,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 35269847,
+      "sha256": "2eacebfd950bc9502303121d9813b6a362fdfdbf592b503d6094ce55d46259c8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000161.parquet",
+      "episode_id": 161,
+      "frames": 323,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 43150855,
+      "sha256": "1e0486e1f500411f492fc47cdbc699cc49c29bc6635083655259ea3889cceab4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000162.parquet",
+      "episode_id": 162,
+      "frames": 272,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32717491,
+      "sha256": "867212d4331de6860e562cf216c7eb86190402694d46392722d6721c0bbf2ea7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000163.parquet",
+      "episode_id": 163,
+      "frames": 241,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 32477266,
+      "sha256": "26ee3b2d5a20085dda16236ae76ee5ecac62ed9283a3e601893aac0dd841ffb5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000164.parquet",
+      "episode_id": 164,
+      "frames": 310,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 31237182,
+      "sha256": "5de61ce37af8b47593e5dbb3088e9c7d7a4964e18921e31379615d4fa9a9f3f1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000165.parquet",
+      "episode_id": 165,
+      "frames": 256,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 36116368,
+      "sha256": "9b0626690842d338f744f6cec048c41dfdb16219fc873af9ebabfd64aa4f0603",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000166.parquet",
+      "episode_id": 166,
+      "frames": 321,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 43669841,
+      "sha256": "70208acfd86be5a5b2e3caae15ea9cb1bdcc5f2e2984825bb3f5a2e665437157",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000167.parquet",
+      "episode_id": 167,
+      "frames": 248,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 31985425,
+      "sha256": "dad196d4173a7c4db52c3759c1b6a1a4bea9b37e60954b0c862a046b1b6874c1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000168.parquet",
+      "episode_id": 168,
+      "frames": 203,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 26793896,
+      "sha256": "456a8333023152a86e4c02ad6a353105359dd4bee75aab7f0aeba025b55cd16b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000169.parquet",
+      "episode_id": 169,
+      "frames": 287,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 36081180,
+      "sha256": "dabe9656aec8644eae406823800f94a4385c2ea29bb17deb3eb70632d261c09a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000170.parquet",
+      "episode_id": 170,
+      "frames": 277,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 35918698,
+      "sha256": "2a2be3819014a8dd4786e2efbe925276cc74d30f22486638d65f21826a610f4b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000171.parquet",
+      "episode_id": 171,
+      "frames": 261,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 35599275,
+      "sha256": "f9430d26bc6442fac56f68ebd81211c82589ea4124c72878004beff4f8419c25",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000172.parquet",
+      "episode_id": 172,
+      "frames": 258,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35680690,
+      "sha256": "ce3e8d65c8ab1bc544040243fb441e2dbbbe57be3bc32242fd28af666f9aa9cd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000173.parquet",
+      "episode_id": 173,
+      "frames": 300,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 30739198,
+      "sha256": "39e1a2f522a9e26b0a481c7321733405daaa60e99326bac993edf396609b2e25",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000174.parquet",
+      "episode_id": 174,
+      "frames": 244,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 32659700,
+      "sha256": "e38b333b5e6951496b43a7e2fd550e96f08556a48d9faff540efb3e5a5786951",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000175.parquet",
+      "episode_id": 175,
+      "frames": 235,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 32558178,
+      "sha256": "56a7cee40fa1b02c98f8fbe3baad2af331471b40406764d113d7587af3cb4c37",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000176.parquet",
+      "episode_id": 176,
+      "frames": 275,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 36012797,
+      "sha256": "dbba81625a26a3df8afdb1557b11b7bb72468c0f65a374f948800c1ffd6203b6",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000177.parquet",
+      "episode_id": 177,
+      "frames": 244,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29965162,
+      "sha256": "b86f6469536dfea83302a1d973ccb4591648e79f6b125f4da1e0fd283cfd3665",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000178.parquet",
+      "episode_id": 178,
+      "frames": 260,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27352189,
+      "sha256": "4833c2db9053d041ba0c224436d08707389719bf665bbbfe1b699aff8ce11cd4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000179.parquet",
+      "episode_id": 179,
+      "frames": 410,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 45296117,
+      "sha256": "8c4aa8d895473191e13e21021fd4bcfd956742408ae276842750f481317c932a",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000180.parquet",
+      "episode_id": 180,
+      "frames": 199,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 23336546,
+      "sha256": "71cb1305f98ae7339d844e1febb908376aacec2c2bd20f8643606a58a2284199",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000181.parquet",
+      "episode_id": 181,
+      "frames": 261,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 38080493,
+      "sha256": "fb3dec15213026db7f4793eca35c407611c89ce413308c397286ba7a0b5db472",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000182.parquet",
+      "episode_id": 182,
+      "frames": 285,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 34821844,
+      "sha256": "12811016c932d89ce3858bb68b63723a29e50161b4dc0bb1252a4752a2c3ceb8",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000183.parquet",
+      "episode_id": 183,
+      "frames": 303,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 41991108,
+      "sha256": "81bdeb3bf9a7d42341934acf8e4a9b25304419801f52175f8e466947350a528f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000184.parquet",
+      "episode_id": 184,
+      "frames": 239,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29195591,
+      "sha256": "61e62afb5375cc16990fa96c31d908f458cf1903cb43d1bb84812297434fa7be",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000185.parquet",
+      "episode_id": 185,
+      "frames": 269,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32807172,
+      "sha256": "f18ba0b36ed7fceb3f37dfc65c203af146ec6c5e033f0e1b63fe1cc465a87843",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000186.parquet",
+      "episode_id": 186,
+      "frames": 343,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 34806751,
+      "sha256": "9351a50ae5400a951a750fb53ba7037b77dea7bc0e1a927fa0818c48a909ec83",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000187.parquet",
+      "episode_id": 187,
+      "frames": 362,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 39912149,
+      "sha256": "461a2eea220ff1126cfcaed8bd980a464f6621d46c19fbf6212705ea64470d6b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000188.parquet",
+      "episode_id": 188,
+      "frames": 270,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36745071,
+      "sha256": "5abed0409e7d60441b136e32f60214ce99d1bade7cec4b917a2d7c97b0831118",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000189.parquet",
+      "episode_id": 189,
+      "frames": 252,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 30486647,
+      "sha256": "190fd0ebeadf02c19898db39e48774377c8204e0fec4cda2470b3ac0ef29931f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000190.parquet",
+      "episode_id": 190,
+      "frames": 233,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30077142,
+      "sha256": "dfd01972496742df6563d4b33af7dcf4aee8fd462a35560fa05960605c8dcee0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000191.parquet",
+      "episode_id": 191,
+      "frames": 165,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19629386,
+      "sha256": "11c8120ae06c869d8c6f200dcb549c4343f4382a8c8c9137be6f2acfadd0e4df",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000192.parquet",
+      "episode_id": 192,
+      "frames": 230,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28273284,
+      "sha256": "340fbfb3223ba90699d0b2a72f73be589e08e1c57e6527da27ba944f37ac73f1",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000193.parquet",
+      "episode_id": 193,
+      "frames": 265,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27315353,
+      "sha256": "d1ce14e7f0db762dbaadf06a0cb94fa0a31a4863b49b4fcd2ac1862e688ea6b0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000194.parquet",
+      "episode_id": 194,
+      "frames": 466,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 51736065,
+      "sha256": "8fcae56cd2957ef1d2b21bcf3b195fcfe6641c66ed01a7d583506dc69b83e792",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000195.parquet",
+      "episode_id": 195,
+      "frames": 281,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 37997944,
+      "sha256": "f81b73677c48962a54ea01f462220adc0f3b93e76c797a6173b99a08b1af2737",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000196.parquet",
+      "episode_id": 196,
+      "frames": 269,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36698699,
+      "sha256": "229b58dea2219714c9ed832b1be218a43e9f72486dc206c1a51e27798447f1b5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000197.parquet",
+      "episode_id": 197,
+      "frames": 301,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 39934527,
+      "sha256": "0432334c42a5a06741001d1ccb698aeda66c064e351b411507e7ea5e64d5a130",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000198.parquet",
+      "episode_id": 198,
+      "frames": 235,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28915070,
+      "sha256": "fdf2d1a38237f1be081eb5b364665d74fc7326b4d2ac4c9531c06d509ac6ac4a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000199.parquet",
+      "episode_id": 199,
+      "frames": 250,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 36071255,
+      "sha256": "153f67a32b12e61f7e92061238866ba17a130d52306787fcbaa43045652044bd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000200.parquet",
+      "episode_id": 200,
+      "frames": 343,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 49488286,
+      "sha256": "022820ba182987f2553a12a38ce17f4484222734a8a94759485b4559589b961e",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000201.parquet",
+      "episode_id": 201,
+      "frames": 243,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34429712,
+      "sha256": "7be7bde04bab301a16cc4492eb85f9d2f156f3d4b1d3675828152178d944f222",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000202.parquet",
+      "episode_id": 202,
+      "frames": 232,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 27679007,
+      "sha256": "c6db1bb04cf3116e047017a4defbb31ae351c20fc968baff8c49f01627efc798",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000203.parquet",
+      "episode_id": 203,
+      "frames": 243,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29835918,
+      "sha256": "ad1a5781450b64577d20026ab88ef4f344195c67929992fabfd803e2e8f2b81c",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000204.parquet",
+      "episode_id": 204,
+      "frames": 398,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 43926813,
+      "sha256": "67276458f5e15a325309538eb9382284650a5575c1bab5defd05a1c231f259d5",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000205.parquet",
+      "episode_id": 205,
+      "frames": 238,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 31507643,
+      "sha256": "e67ef1440a4f2dd6c94be1e3bd5a4a794c52ebf71fa6caab36b22439654d90ef",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000206.parquet",
+      "episode_id": 206,
+      "frames": 244,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31811004,
+      "sha256": "d0772001b8d3c03c3ddf471a0898a59b52cb1d463b4044333ae58e448a3fd032",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000207.parquet",
+      "episode_id": 207,
+      "frames": 240,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30868248,
+      "sha256": "8469fe04ec83428ed802970a9c9ea95ec9c4e7b80f1ef7b37e9a0e4153336e19",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000208.parquet",
+      "episode_id": 208,
+      "frames": 250,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33334896,
+      "sha256": "bd4845d222912f5746d3747b34c8be50f884e92d451970247ae98fb81116ada6",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000209.parquet",
+      "episode_id": 209,
+      "frames": 169,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19783492,
+      "sha256": "b120910793fcfadc04d224dc9fe6a2ecd2efcb84e54192f4c7d44caa544d9f97",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000210.parquet",
+      "episode_id": 210,
+      "frames": 286,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 38033211,
+      "sha256": "ab3a25bfb0f2bbb8ddbee687c6cd80240885295ba5e6385c499ce793417fa840",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000211.parquet",
+      "episode_id": 211,
+      "frames": 277,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 35702541,
+      "sha256": "3be9ca70b96f70b479773d1554c4cb146fb5ba42d9132beae762700450c4ee37",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000212.parquet",
+      "episode_id": 212,
+      "frames": 220,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 28424724,
+      "sha256": "aeecd1e32812a1d79f426bdf16bd4b1ac2e5560f282c7e7e25f47ed2a08baeeb",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000213.parquet",
+      "episode_id": 213,
+      "frames": 184,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22112754,
+      "sha256": "4e2893e1da68f5df06df2a4fed55a71e8ec8f634d076cde659f82c4492b99626",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000214.parquet",
+      "episode_id": 214,
+      "frames": 388,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 42781962,
+      "sha256": "b92820da9e4840db5044a76e172a8b7d9c30422fe17174ec6f60fc1692d2ad29",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000215.parquet",
+      "episode_id": 215,
+      "frames": 247,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34752811,
+      "sha256": "dc1121f29063772b5f9794552c369f0ea2c557482bec95b350bafcad91c03546",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000216.parquet",
+      "episode_id": 216,
+      "frames": 232,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 30471648,
+      "sha256": "5b797e79c7bc6259ab32f6699f0101159d70ccff8a87c4f65f2f7d90ff80d655",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000217.parquet",
+      "episode_id": 217,
+      "frames": 271,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 28370830,
+      "sha256": "460b733ea8f906bc0ab370a82ec2416d7c2c2b8a638def11ce1d9ff2a7bb7e8d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000218.parquet",
+      "episode_id": 218,
+      "frames": 245,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29843829,
+      "sha256": "d907c388b008a07a21476abe856675f6f4e7b65b79f3b38eea8a9fd82dd71c49",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000219.parquet",
+      "episode_id": 219,
+      "frames": 267,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 38355497,
+      "sha256": "2aa51a9ff2c4a25f319d468a3a77a214de783eb9f3ce5c397ff75a15aeded0e1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000220.parquet",
+      "episode_id": 220,
+      "frames": 275,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 36288366,
+      "sha256": "2f321c87f554f0211a234c3b2fc73778f8ae0f8a1fdaa8b70b03e57137e89651",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000221.parquet",
+      "episode_id": 221,
+      "frames": 274,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36985789,
+      "sha256": "7c335deb4918a77206d5572d36cc2fcad3c0c09696858cf07c6b732ecb18f24c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000222.parquet",
+      "episode_id": 222,
+      "frames": 243,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 32610345,
+      "sha256": "11f9830bec93cf602cafa686c587cac24a7632d5c9b150055aa675c282a55e97",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000223.parquet",
+      "episode_id": 223,
+      "frames": 227,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 30426956,
+      "sha256": "ed1181d601df934923ad18300ab4c47d6216a5c33ae1da7d49154722bcd2099c",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000224.parquet",
+      "episode_id": 224,
+      "frames": 235,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 30638053,
+      "sha256": "5df1d1d1323e47bfcfcfd85dd3e42f64a2e84ec6b6614e9ecbbdd429cbab72e0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000225.parquet",
+      "episode_id": 225,
+      "frames": 257,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 31708053,
+      "sha256": "ada69592babaa05ccd5e5ce6f86a70e91005a02c5f4d2072c8d94e7b932c91ce",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000226.parquet",
+      "episode_id": 226,
+      "frames": 248,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 24939821,
+      "sha256": "8a59643c5986fcc2ac1a6dfbc32ed0ec2beea3fbce9a1bef41a1c29f30cf3cea",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000227.parquet",
+      "episode_id": 227,
+      "frames": 167,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19969924,
+      "sha256": "2114f96654d9a72731c0f91e0000b6eb0e8ea736a314ca4fd595344a9fa4757f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000228.parquet",
+      "episode_id": 228,
+      "frames": 167,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19775985,
+      "sha256": "b7e7009e002a8288dec7600ee89aa0227d58ea475e8758ea11d2bfcc0acb326d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000229.parquet",
+      "episode_id": 229,
+      "frames": 216,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 24756696,
+      "sha256": "e0c92a559f83b2929bfa54aa482c942597143a77798b0d2cd5e146fbdf1b8d25",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000230.parquet",
+      "episode_id": 230,
+      "frames": 278,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 28213615,
+      "sha256": "b1201ad2c5e78d5f6f25df61b1100a056a88cb553492ad06b699eeeb062a9ed4",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000231.parquet",
+      "episode_id": 231,
+      "frames": 266,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 34487481,
+      "sha256": "63fed9d535b7ca1e7b8228b7eb4d1b8c03718c85d6bd91979da3c2975bdf60e7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000232.parquet",
+      "episode_id": 232,
+      "frames": 272,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 36535582,
+      "sha256": "9bcbbf808ebb84f582ee83d8e2a2cc0b08c08dae71830c49977e70f87970973d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000233.parquet",
+      "episode_id": 233,
+      "frames": 265,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 33539304,
+      "sha256": "d4244e4f41d425fd7c3d05af5e838af3be60ed8808061ff4f518195d2ea51474",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000234.parquet",
+      "episode_id": 234,
+      "frames": 255,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 37231016,
+      "sha256": "19a1c81deef801d85d3b0cb5b7e224ec451aefbbab812c0f0348a648a457952d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000235.parquet",
+      "episode_id": 235,
+      "frames": 247,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 31352856,
+      "sha256": "a502e337393cb9a86332d0394b36ff0e871c3bf630ace3e6ffe6c6274316f19c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000236.parquet",
+      "episode_id": 236,
+      "frames": 279,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 35892797,
+      "sha256": "9a88d625052d6ab5370d6e59b2168a79ed46cd0a798f3c2c2a62823815a89672",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000237.parquet",
+      "episode_id": 237,
+      "frames": 264,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36004556,
+      "sha256": "c47be2bedb7dde7bfaed9f557a1f96f726c29b5578adf4735ed68686f316eb93",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000238.parquet",
+      "episode_id": 238,
+      "frames": 340,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 50044086,
+      "sha256": "379982e60f0fdbdaf3d58213aecc591c974376508dbbfe2fb69710121c1ca0a4",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000239.parquet",
+      "episode_id": 239,
+      "frames": 323,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 38445345,
+      "sha256": "65641d000b09e8a12bd831ee4c7ded86413581731eb5df1d98dfe466fdebe21c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000240.parquet",
+      "episode_id": 240,
+      "frames": 289,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 34852870,
+      "sha256": "c848e6b9137cf33abf486e5a5ee97dc97ecf32903972dbf0bef942e72e32db21",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000241.parquet",
+      "episode_id": 241,
+      "frames": 274,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 40473958,
+      "sha256": "c8f3566e74025e1b37c3944a19e39284f3b3d0c65c195197094716b63d1c23ba",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000242.parquet",
+      "episode_id": 242,
+      "frames": 215,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 28573388,
+      "sha256": "7ec60fe2304f1371f44b8f691b8309e11d481bccf8ccaa58e171e5bc56cd2785",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000243.parquet",
+      "episode_id": 243,
+      "frames": 299,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 36216121,
+      "sha256": "950f36427490da84c0e279e6747438e89ff4df5a333e8fcb4d26f7d5f4f0168a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000244.parquet",
+      "episode_id": 244,
+      "frames": 246,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34168741,
+      "sha256": "15adeaa97d387b3b1da332e838efdc78c8afcc13037f11044946f7393df1fe83",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000245.parquet",
+      "episode_id": 245,
+      "frames": 258,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 26443577,
+      "sha256": "9bcdd3673753e1ac81dcb0a28b21a0b3c9df365dfbdc884e70a7db5caed14717",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000246.parquet",
+      "episode_id": 246,
+      "frames": 277,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 37979464,
+      "sha256": "8d25f287c9452264bf2e97d159d7f0e512aedbdfe179307cd743ea0322b40ab2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000247.parquet",
+      "episode_id": 247,
+      "frames": 250,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 32363091,
+      "sha256": "4a6a063919b1743c8a7a794cf9deb60ef1e5a149e6c2dc9a8e09cc10930d64ea",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000248.parquet",
+      "episode_id": 248,
+      "frames": 235,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31089820,
+      "sha256": "e11bf9151433b47be494b8c74de06852c8ad64f9cefea979b7978b99212f2473",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000249.parquet",
+      "episode_id": 249,
+      "frames": 233,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 29979872,
+      "sha256": "9b9a53a98f4c4c12c71494293bff59640f9006ecf8e00154d2aef140459da415",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000250.parquet",
+      "episode_id": 250,
+      "frames": 261,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33968212,
+      "sha256": "eeaad8b224fa67884d460851cdc15783f3c34748450e79d1a47a83818cfd5042",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000251.parquet",
+      "episode_id": 251,
+      "frames": 234,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 32365523,
+      "sha256": "961b10ec25738c6796f8a481adf31353ed802bb6501205801a41c572214739e6",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000252.parquet",
+      "episode_id": 252,
+      "frames": 232,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 30489577,
+      "sha256": "09b9e62ea571f07857c002a191e01dceb31267805b230106e89598d805bd008d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000253.parquet",
+      "episode_id": 253,
+      "frames": 275,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 33253102,
+      "sha256": "29b02384d7d630dd05d0e60f8253cd5149c909a87817d92028368620a3978410",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000254.parquet",
+      "episode_id": 254,
+      "frames": 227,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28287615,
+      "sha256": "733485b8ccdd3e40cb843c53ce339123c2e31ffa651eadd34e679b5619b5bf5b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000255.parquet",
+      "episode_id": 255,
+      "frames": 291,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 35866894,
+      "sha256": "1ab2d7014773f90dd4aca5bfdd5cdd7666892a499b96353e55bded9cbfbdd70e",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000256.parquet",
+      "episode_id": 256,
+      "frames": 288,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 39423808,
+      "sha256": "966362652e1390847b950c0878bf07d3c4fe7ffb61730352261273035d46c87f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000257.parquet",
+      "episode_id": 257,
+      "frames": 298,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 37695436,
+      "sha256": "62675d48472b46b5a1bea7cfb9f1973550bf19e81a54dcf12e09125c445446ef",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000258.parquet",
+      "episode_id": 258,
+      "frames": 172,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19857530,
+      "sha256": "63c654a57932b53010aa1b028447fb859ea231f6443b854e66d645b1f1975d9a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000259.parquet",
+      "episode_id": 259,
+      "frames": 228,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 28358802,
+      "sha256": "eaf5bbd4dc69bcf40ab24af6200ee55496343d0fcfa90e6f6eea8ed01382fb30",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000260.parquet",
+      "episode_id": 260,
+      "frames": 367,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 53464189,
+      "sha256": "2300c5624848dc457d796de96ea2c0c957ce862b875a1bf83488f3b67fb8ce87",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000261.parquet",
+      "episode_id": 261,
+      "frames": 197,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 23368247,
+      "sha256": "b61dca07b192806a01fcb985d050a2be84ac8c8ba20ca48a1f6a9a32f82a5ce0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000262.parquet",
+      "episode_id": 262,
+      "frames": 228,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28213905,
+      "sha256": "8bd3cc183085fcf5fc670001f3cd4a24228bb3f9c8158d6d802e41d305ecb76d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000263.parquet",
+      "episode_id": 263,
+      "frames": 307,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 37331739,
+      "sha256": "848e40c016acf613a27405f43af2147a0048b2961db23fd66f3246738fb8b100",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000264.parquet",
+      "episode_id": 264,
+      "frames": 286,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 36360292,
+      "sha256": "99a68058c5535444d05f17fc7feb7af2dcf988b1c3216cf52b0d4e6155dffee9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000265.parquet",
+      "episode_id": 265,
+      "frames": 252,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 34240321,
+      "sha256": "eec073bbba9190626dac738a1bb04bc8281a65b319cb75f6ebae2067cb030404",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000266.parquet",
+      "episode_id": 266,
+      "frames": 240,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33039610,
+      "sha256": "6b7879d16fe4965e1b22d043a1931b0b5da3590c5dc96098b0cf095e10ac8629",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000267.parquet",
+      "episode_id": 267,
+      "frames": 232,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 29551353,
+      "sha256": "69f32e0e84ef7deb5d73ed6ba186966f93b34d2c8ea059e72b7a36bb338cb1f3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000268.parquet",
+      "episode_id": 268,
+      "frames": 229,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28784047,
+      "sha256": "94b4e6c6b384d5462826274ae3bb3fed131ce715928e30905d5cec50a4ff3ac3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000269.parquet",
+      "episode_id": 269,
+      "frames": 269,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 28235256,
+      "sha256": "39aa584a9d3dc2e53517583d00d9c166a5a3c638df8226e215f9097bbe7e75fa",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000270.parquet",
+      "episode_id": 270,
+      "frames": 457,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 50025191,
+      "sha256": "493f46fd4e7e903f5afc4caa8add7ee6d03bcd9d955c82302d111e017ee1f9e1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000271.parquet",
+      "episode_id": 271,
+      "frames": 281,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 37498350,
+      "sha256": "48272ee71a9506c7722b3a90305b6e3995b6002d1e9447d684639067a2ea99d3",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000272.parquet",
+      "episode_id": 272,
+      "frames": 272,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32284655,
+      "sha256": "7704d51a70c4b3ac90117d9518f9ad97cc37c762ef3e53bdc23f334256129f21",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000273.parquet",
+      "episode_id": 273,
+      "frames": 322,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 45211486,
+      "sha256": "8e447f31da22fb091f238c0fe903e48494dd3dfc474b12d048b02b9e765ff80c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000274.parquet",
+      "episode_id": 274,
+      "frames": 230,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28941593,
+      "sha256": "95896f0cd8340649b8a8c2c96b90a3c78ec2294b3faad3cfd260941809ee688a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000275.parquet",
+      "episode_id": 275,
+      "frames": 265,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36125263,
+      "sha256": "d8602d98d6ec3a908ebc74911ba2027ae7a2aade3d9f29b845dcd861f92837e0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000276.parquet",
+      "episode_id": 276,
+      "frames": 291,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 29793811,
+      "sha256": "8e4dd98aad6be2aedf34fcfb78ed5f6e3cb8dfe2acdc7987061914d6e55aa461",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000277.parquet",
+      "episode_id": 277,
+      "frames": 238,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29485312,
+      "sha256": "10377bcd0d4575a783e7ecfa5bae9cb06337b72665b6c0615892e1c37e67c09d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000278.parquet",
+      "episode_id": 278,
+      "frames": 261,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 31364099,
+      "sha256": "8ce09deabf346f065377c8f80203cc9f6e40f3618f0ba7b7abb5e5e54ff342ab",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000279.parquet",
+      "episode_id": 279,
+      "frames": 162,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 19518423,
+      "sha256": "7400c08810a3eadd4a4999fd81b984b9b98b8b763d65f1e19eb5507743f574ce",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000280.parquet",
+      "episode_id": 280,
+      "frames": 239,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 33721888,
+      "sha256": "888c4c6a29c241a826dc2c9708bff7a1a6f89d9ba8ece7bd4dc5f18eb76412b7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000281.parquet",
+      "episode_id": 281,
+      "frames": 281,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 38270974,
+      "sha256": "7919e0bd270144993fec5370ff43aa119de6859fb43cb90650df5e622bbd3b05",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000282.parquet",
+      "episode_id": 282,
+      "frames": 268,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27257852,
+      "sha256": "d8c2454cb9a612a5f86a38250886d7e66e99102238b524dc834d623ab5935223",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000283.parquet",
+      "episode_id": 283,
+      "frames": 408,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 44753815,
+      "sha256": "b0c0cae9bb44f7e6c980484436ab313aa20eceb61916a5db74f0dd810466fdde",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000284.parquet",
+      "episode_id": 284,
+      "frames": 272,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 37738876,
+      "sha256": "c4a5d7a2e34bea7a2d88b435d83642716966a4c18c3ad8b1e87446714f758453",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000285.parquet",
+      "episode_id": 285,
+      "frames": 295,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 30145951,
+      "sha256": "c82f2dfcaecfbcb107ffca05e91eaa933e4931d516cfef15fc9d3b813b660d13",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000286.parquet",
+      "episode_id": 286,
+      "frames": 277,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 38155092,
+      "sha256": "b40f70543d9b9ae977465290ea7264dc7653069f4a327948a845f2d6b5a657a1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000287.parquet",
+      "episode_id": 287,
+      "frames": 218,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 26104582,
+      "sha256": "501c8e0da2fce65eafb330e42e7ece1413fdf90bb6eec2fa5a391a360cf4ef26",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000288.parquet",
+      "episode_id": 288,
+      "frames": 341,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 37688834,
+      "sha256": "140df544eb538e2f3dd65c0514545d3239c88475358e5e94d1c91e8d16c199d9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000289.parquet",
+      "episode_id": 289,
+      "frames": 246,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 33454476,
+      "sha256": "41aae4a48dd74cff582d1bbc3b62f6b8f69bf886bf061b4efa9e1986fdb928ea",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000290.parquet",
+      "episode_id": 290,
+      "frames": 150,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 17841585,
+      "sha256": "3450035259cff4d6ee0c3b24cbceb024f7ce470deed10a74bb05508adc4fc3e0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000291.parquet",
+      "episode_id": 291,
+      "frames": 245,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 35592778,
+      "sha256": "971ed50e426638b11c03c0dfe87d960b0e90fb555679912980cf7102511e84ef",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000292.parquet",
+      "episode_id": 292,
+      "frames": 312,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 38329264,
+      "sha256": "5a0c4f8e28dde973b83b6bf8098b38194ae47da14db96e8f2195e5cb67dd3b17",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000293.parquet",
+      "episode_id": 293,
+      "frames": 305,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 41037958,
+      "sha256": "4cc5360c31f5cc35f5524e4018182dbe9ce060b5415abf746760279d11dffab2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000294.parquet",
+      "episode_id": 294,
+      "frames": 241,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 33669703,
+      "sha256": "260d2c48255e37c3db798c23736d64e9dc3da76cf629391152edcdbf7123f691",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000295.parquet",
+      "episode_id": 295,
+      "frames": 271,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 34131741,
+      "sha256": "8279ccbba64b5d1099a65f07a57ce6ac1806c4bc0740649e593fac69b2297e20",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000296.parquet",
+      "episode_id": 296,
+      "frames": 254,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35466987,
+      "sha256": "95b07f80744200aeac203dc303bee19f3253d2206ff910eafdd6a814ee26525d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000297.parquet",
+      "episode_id": 297,
+      "frames": 236,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 31477187,
+      "sha256": "b2b901c7942d84f90559a0dea59a6d46d6682b06e1ba6a0a4aa5239d03e09f52",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000298.parquet",
+      "episode_id": 298,
+      "frames": 170,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20214885,
+      "sha256": "e3a063573bfdea0dee2bb3348672364792f8fdd5a42b485eea22b575303e7fdf",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000299.parquet",
+      "episode_id": 299,
+      "frames": 189,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22762536,
+      "sha256": "4f909ac50915cdb6b701c374ffdbbf01e404005cb27b1aecc044d8c13be33f04",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000300.parquet",
+      "episode_id": 300,
+      "frames": 237,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29537187,
+      "sha256": "7bc8e359150a58c39d0b296c070cddd429b091a825ef085383d6fcceaa976e9d",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000301.parquet",
+      "episode_id": 301,
+      "frames": 236,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30259780,
+      "sha256": "2d80016a82915209fc4f69eaa2a92f8f76e4eb378a30742ab9394da5d346229c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000302.parquet",
+      "episode_id": 302,
+      "frames": 252,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 33238619,
+      "sha256": "abd24fe3fa31617f2a4502a3f5eba3a435c609099bdfd0d7139878489e237c41",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000303.parquet",
+      "episode_id": 303,
+      "frames": 244,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29745676,
+      "sha256": "d10680c03465458e57e8c2ec054de2f3127c84cd5ff8939f58963fe871275198",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000304.parquet",
+      "episode_id": 304,
+      "frames": 306,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 37446014,
+      "sha256": "9b8b6bfa4373d7a714732d5c80d02d8e3c726e5bb19497518e0490910e6c6593",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000305.parquet",
+      "episode_id": 305,
+      "frames": 243,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 33832324,
+      "sha256": "31f7afe9dab98523a934b6acfdcc69f4bc50173372ba57ce7d87f4848a193b44",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000306.parquet",
+      "episode_id": 306,
+      "frames": 505,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 54565038,
+      "sha256": "a94ae5652aa88c2017b5773e0d0daef0fcb88dd22d063564db9b7aaf950dab4c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000307.parquet",
+      "episode_id": 307,
+      "frames": 330,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 42458172,
+      "sha256": "2d21b74a8ec637326080b1aa86f686f62788ce7501a4bbb3d9a4f7760afe9af0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000308.parquet",
+      "episode_id": 308,
+      "frames": 336,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 48188154,
+      "sha256": "65a3f3960b1f9da19a9b1b4e68b51587553a24b15773da07f322d10222b67165",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000309.parquet",
+      "episode_id": 309,
+      "frames": 264,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 34140464,
+      "sha256": "4c72079af9f0426105de5340b5d4300148a35ec8952bb7f0bdc3dc12a16ed6cc",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000310.parquet",
+      "episode_id": 310,
+      "frames": 257,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35852464,
+      "sha256": "d6c3b806b5e59ed316fe4e3e9cee2428556d2e9212d8e711a9db26ae7b380b3f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000311.parquet",
+      "episode_id": 311,
+      "frames": 186,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22455966,
+      "sha256": "7af92aa0952c2c4d4fec90e75b69d9d44f053510ddfd2e1e1e13c11989984699",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000312.parquet",
+      "episode_id": 312,
+      "frames": 256,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 26212791,
+      "sha256": "b4b37d349334f45b9a3a013107c297a22d8514bd69a2185b9e793be321ceecc8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000313.parquet",
+      "episode_id": 313,
+      "frames": 193,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 22637951,
+      "sha256": "e316ce43c569742228c725cacd60a2f01196329e266d8fdc00adebfffc8ecac1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000314.parquet",
+      "episode_id": 314,
+      "frames": 383,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 42277617,
+      "sha256": "d364aaebb84cc27b0753a5ab5924abafb6a0520e6da69e97d6498eccee7bba24",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000315.parquet",
+      "episode_id": 315,
+      "frames": 233,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30081077,
+      "sha256": "14020bc3c1874edd0c1b22c5680f434844cf8ea948405ee802481a713dfa6e0d",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000316.parquet",
+      "episode_id": 316,
+      "frames": 396,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 43033138,
+      "sha256": "0f3cf4edd6f6b346a63ddfdcd6e6fbfbc3c4c947cf980f10b4d6ac0e68caa0cd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000317.parquet",
+      "episode_id": 317,
+      "frames": 300,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 43182983,
+      "sha256": "35f8c785c2696b8773691fc7da0f7131e3cfae7260852f03b6527419048663c6",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000318.parquet",
+      "episode_id": 318,
+      "frames": 290,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 40065843,
+      "sha256": "67d3add7fc4b968e0c024891f22574111b1bf9ef8709629a4fd3b7f124dd615b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000319.parquet",
+      "episode_id": 319,
+      "frames": 237,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28743125,
+      "sha256": "20cb44fab9e337f88a129b6af8fa9c0c5232fd47a12d8f52285adfb1bf84ce36",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000320.parquet",
+      "episode_id": 320,
+      "frames": 244,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34225685,
+      "sha256": "9e348e449bb48b4ba0523be9b0d24b38b160637f0c317e0888413f574383559c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000321.parquet",
+      "episode_id": 321,
+      "frames": 240,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 29188278,
+      "sha256": "2b382eabf714d3fd526319a9e28ebb5630ecbaa90563c74e2b0c8a7398fc2c8b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000322.parquet",
+      "episode_id": 322,
+      "frames": 240,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31502277,
+      "sha256": "3af136c686618fe444c379c3bd384d7fed0baefa272daecc91ae810ed29f5afc",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000323.parquet",
+      "episode_id": 323,
+      "frames": 266,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 33798774,
+      "sha256": "54c69e597287bf9f9c129abf97090f68939d0ddc08d67f9120b1ec4da979351a",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000324.parquet",
+      "episode_id": 324,
+      "frames": 307,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 31424173,
+      "sha256": "1f9ef5a970d42523afaaf12289c8a2f9d1a56016d2baf68b303ae8662cb8b887",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000325.parquet",
+      "episode_id": 325,
+      "frames": 265,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 34313557,
+      "sha256": "4f926b25feccb23ba0c9567fd165c7188240af47f4efe6a052539eea141d783b",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000326.parquet",
+      "episode_id": 326,
+      "frames": 244,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34633564,
+      "sha256": "f426ddc3ccd7dfb984c005e204b35cd85cb282155d07c1bdf3793e0a7f1c2ee7",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000327.parquet",
+      "episode_id": 327,
+      "frames": 235,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 29741183,
+      "sha256": "78b808343f8ac61bf18d07de5725cf9270a3a0cfc2c28bab58e21aaf657803ea",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000328.parquet",
+      "episode_id": 328,
+      "frames": 271,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 37709461,
+      "sha256": "d1651bd744910800a8bac4f4111c7f2d870c260f4107c8288079255ee6df20a0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000329.parquet",
+      "episode_id": 329,
+      "frames": 252,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34337524,
+      "sha256": "e0b169a76238ee87b7040ef70d02bc31abec1d120116100bcd939c8515d9e9ad",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000330.parquet",
+      "episode_id": 330,
+      "frames": 255,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35783590,
+      "sha256": "becbeb9476bf2d280784a35fe1557a451a40ab9cd60530db12b3ab833125012b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000331.parquet",
+      "episode_id": 331,
+      "frames": 267,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 36151285,
+      "sha256": "923a5320121a537c21fbe8e78ceed2d82a61a3bda0f329fe6b0c0eaf1ec54be2",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000332.parquet",
+      "episode_id": 332,
+      "frames": 246,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 33542142,
+      "sha256": "7bd60287acc72b83ea30ce4ab474a0ee5e76bbf97139b92d597cef69fc0390e1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000333.parquet",
+      "episode_id": 333,
+      "frames": 238,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 32722611,
+      "sha256": "3935b8f517276dc88b441b84c191b75b4d8b50f8b03091b0d50d9e3fabe6df4b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000334.parquet",
+      "episode_id": 334,
+      "frames": 265,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 39465632,
+      "sha256": "cd866abe253203d46330d8a2c4ebd5f2d3d8a719b29980d50a05dfeaf1771777",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000335.parquet",
+      "episode_id": 335,
+      "frames": 288,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 40024399,
+      "sha256": "12200c77362a4a47d517087156abf6e8b6c0c48181db6a8f48a07d1ddaf1bc04",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000336.parquet",
+      "episode_id": 336,
+      "frames": 276,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 39492632,
+      "sha256": "febc5b1ae676bde39f5d18b5309f6489bd75c0808e5a75504b6e54d55667af93",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000337.parquet",
+      "episode_id": 337,
+      "frames": 227,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28882619,
+      "sha256": "3bdf08f219aea3448b212b94d51ca03fbc77900f87b4b81a1a56242948b8fafd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000338.parquet",
+      "episode_id": 338,
+      "frames": 221,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 27183286,
+      "sha256": "79d0d10d4e18ac1350e8068eb8788343a7bf616aa4a8bde7cb0676d3f014e6fb",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000339.parquet",
+      "episode_id": 339,
+      "frames": 373,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 37377310,
+      "sha256": "79c40b00bbe2431c4119d0af7c8c6fdc06acca2ca13902f6612084a0d9c05271",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000340.parquet",
+      "episode_id": 340,
+      "frames": 282,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 40878451,
+      "sha256": "d185e77a19842b4d515a05131ecdd2a2be143660dcc25c4b694d5dd3859ac807",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000341.parquet",
+      "episode_id": 341,
+      "frames": 389,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 44247491,
+      "sha256": "d5ce75c3984c793fdf7ee3f7c6d8b91723e5a1277b327332d54fe496659ecceb",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000342.parquet",
+      "episode_id": 342,
+      "frames": 415,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 43256712,
+      "sha256": "a450d58e84b3f99c4a681085dc157019e88d716ec1197c592bd7fe0d7dc41ce1",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000343.parquet",
+      "episode_id": 343,
+      "frames": 242,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 30742822,
+      "sha256": "a9c40cd1b3a8668261ee2fc91a7adc2186f4d6c920179e4a09a02204eb750417",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000344.parquet",
+      "episode_id": 344,
+      "frames": 254,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35362298,
+      "sha256": "752c6f0788823c1e4091668e838cdf5b4f3a8bb80924e12e3758b4e57549f223",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000345.parquet",
+      "episode_id": 345,
+      "frames": 295,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 36185769,
+      "sha256": "9e4738464a66388de383f88aadea2b1903630f57b30df90a0fb41b6548f4e5fd",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000346.parquet",
+      "episode_id": 346,
+      "frames": 275,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 34869418,
+      "sha256": "fcb5d6c467ab10b35fab9311bd919b8430f5c9ea1d1615e460d17f9d5b197cca",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000347.parquet",
+      "episode_id": 347,
+      "frames": 282,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 38083145,
+      "sha256": "bed4916f44e1dfa3fe128a0f6af89be47322f698a9ad40dca94e40d05255c08f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000348.parquet",
+      "episode_id": 348,
+      "frames": 208,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 24958970,
+      "sha256": "b96df48f46ed02aba875ff50f4a9d896a03027b41522f6e8799364dd2d32ab7b",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000349.parquet",
+      "episode_id": 349,
+      "frames": 176,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20599466,
+      "sha256": "c3155fcb7d069d3195caf47724cbebdd99908ebb352b3a7f02b2bc48acf66a72",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000350.parquet",
+      "episode_id": 350,
+      "frames": 278,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 39951745,
+      "sha256": "46b96c28969e4470003fb42a881e7819dd5804ed5d01605c677b84d3d1dd37c1",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000351.parquet",
+      "episode_id": 351,
+      "frames": 265,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 32108581,
+      "sha256": "b98900d4d18d7fc32854747ccf15ad24338b5c1d55d9df8853053a13079ff8a2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000352.parquet",
+      "episode_id": 352,
+      "frames": 282,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 40474422,
+      "sha256": "7e795e0375842aeffc4b4cf28da534788fc77e8da72c8dbc9cca216b5d7f7adc",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000353.parquet",
+      "episode_id": 353,
+      "frames": 261,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 32444055,
+      "sha256": "799d24d194dbc972ec952fc7e457148e1b68cb6550299cf6824c4628e89d6228",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000354.parquet",
+      "episode_id": 354,
+      "frames": 222,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 27001147,
+      "sha256": "375372390fd85e94bfe6a50f3d9382bada901d41dc4b68ebca3a72c2e957b9ad",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000355.parquet",
+      "episode_id": 355,
+      "frames": 237,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 31054809,
+      "sha256": "c5a64d75c847b69484bbbf9507ec5807594330dfda1bd9d7e370f562e07055c5",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000356.parquet",
+      "episode_id": 356,
+      "frames": 342,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 44968198,
+      "sha256": "9662365d519fd9be48b717b4cce773cda2de76dec87db594251f9e15e820a9db",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000357.parquet",
+      "episode_id": 357,
+      "frames": 256,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 26276466,
+      "sha256": "221e472df49dd00d267daa310fb7771316276e1dfe2ff8fe69d81b84c1d9477c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000358.parquet",
+      "episode_id": 358,
+      "frames": 250,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 30658636,
+      "sha256": "c718094e3d8465078b94afae96d88ee16c861302d968943a164f080b78bb1ab8",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000359.parquet",
+      "episode_id": 359,
+      "frames": 342,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 49960875,
+      "sha256": "4cb5bf0f983ca44253330c731a07df2f165bfb8e7b6323226a502f58d3e822fe",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000360.parquet",
+      "episode_id": 360,
+      "frames": 246,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34177837,
+      "sha256": "5b1477a430d85188d560c569eff13ee3d143553091bd39b234676d094248b7b9",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000361.parquet",
+      "episode_id": 361,
+      "frames": 301,
+      "tasks": [
+        "turn on the stove and put the moka pot on it"
+      ],
+      "bytes": 36769607,
+      "sha256": "3967f79a9a59e645ffe8c245fd1606a49014ec7a0a0d7e7becfc49de10b23025",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000362.parquet",
+      "episode_id": 362,
+      "frames": 260,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 33377606,
+      "sha256": "9c5df4478cb77e397b65a3b7dc3d08e3b2f7ed2c44e3f232288b48704e3409c1",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000363.parquet",
+      "episode_id": 363,
+      "frames": 275,
+      "tasks": [
+        "put both the alphabet soup and the tomato sauce in the basket"
+      ],
+      "bytes": 39631101,
+      "sha256": "359a244c11d0112a0c9aeecf780654e8388787cb5df9928b5857decbd5cde484",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000364.parquet",
+      "episode_id": 364,
+      "frames": 174,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20969266,
+      "sha256": "1fa1418ead44d91a078d55c07f0d35662a4e8b01f260cc5913bce6f0cc14af59",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000365.parquet",
+      "episode_id": 365,
+      "frames": 267,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ],
+      "bytes": 27363631,
+      "sha256": "55304bd25ca03b5531053f9035b11e7d5500a0dd1e0887fbe2f6bf3dc9e501e2",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000366.parquet",
+      "episode_id": 366,
+      "frames": 180,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 21382440,
+      "sha256": "8c7026c6d55d3fe901c20fcb5b02162e5743c27b69a7e0a46ad164b9490b2bfb",
+      "split": "validation"
+    },
+    {
+      "path": "data/chunk-000/episode_000367.parquet",
+      "episode_id": 367,
+      "frames": 225,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ],
+      "bytes": 28879296,
+      "sha256": "53aff86644c440acb70508447ab001669634d325c64b203200d3e2867e5cb402",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000368.parquet",
+      "episode_id": 368,
+      "frames": 169,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20148292,
+      "sha256": "87813611204826727cdd8c551e99d33ce702ce6dd8b06407c1e729e5e002479c",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000369.parquet",
+      "episode_id": 369,
+      "frames": 207,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ],
+      "bytes": 27160345,
+      "sha256": "fae44076fdd1fe5df4a668f4fb1e5268d8e3ff1715746cc21b76f32dacd71c58",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000370.parquet",
+      "episode_id": 370,
+      "frames": 247,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 34494759,
+      "sha256": "3b9d50760c791b23bb666c73bf620d5ac788d480bde85282579c61449bbaac43",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000371.parquet",
+      "episode_id": 371,
+      "frames": 251,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 30242033,
+      "sha256": "0a2886486aa3ea44ae6cde51ded8c66bcec29f274ea70a1d5ef4132000a8c16f",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000372.parquet",
+      "episode_id": 372,
+      "frames": 259,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 30253447,
+      "sha256": "8a5faf6d1e80a79297f8c30d6ecd172aef911d5b195f796d88058699fb90b3c0",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000373.parquet",
+      "episode_id": 373,
+      "frames": 312,
+      "tasks": [
+        "put both the alphabet soup and the cream cheese box in the basket"
+      ],
+      "bytes": 40898110,
+      "sha256": "fd61ad34aa1e85ad891d7e995dc30e69783a35fbaa2b65f0af3e493b58866e41",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000374.parquet",
+      "episode_id": 374,
+      "frames": 173,
+      "tasks": [
+        "pick up the book and place it in the back compartment of the caddy"
+      ],
+      "bytes": 20878234,
+      "sha256": "6e4a5e392de385be41da333d8a69f477fb45628bf73140f24267cf4124658626",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000375.parquet",
+      "episode_id": 375,
+      "frames": 255,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 31407182,
+      "sha256": "2e99ab70c805d4a4b5ea444ca1901b74a7050aafe9e11e5235166974dbcd0666",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000376.parquet",
+      "episode_id": 376,
+      "frames": 458,
+      "tasks": [
+        "put both moka pots on the stove"
+      ],
+      "bytes": 49906514,
+      "sha256": "2c88db7c53a8e2ad9d56a90cd6816127d3207481b438671f1d3e9966372b3587",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000377.parquet",
+      "episode_id": 377,
+      "frames": 229,
+      "tasks": [
+        "put the black bowl in the bottom drawer of the cabinet and close it"
+      ],
+      "bytes": 28792026,
+      "sha256": "cda5b9decb7e04a40a254807a7024d0199806cd63c5809fafea2338cee6dbf72",
+      "split": "train"
+    },
+    {
+      "path": "data/chunk-000/episode_000378.parquet",
+      "episode_id": 378,
+      "frames": 252,
+      "tasks": [
+        "put both the cream cheese box and the butter in the basket"
+      ],
+      "bytes": 35213315,
+      "sha256": "9a2522d5fa102972ea98d62048a0ac973f5b5b7d54add3bd88e607e8e6049028",
+      "split": "train"
+    }
+  ],
+  "total_bytes": 12772415005,
+  "train_bytes": 11059659270,
+  "train_frames": 87769
+}

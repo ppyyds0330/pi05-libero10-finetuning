@@ -1,0 +1,42 @@
+# Runtime dependencies and generated data
+upstream/openpi/
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+artifacts/
+checkpoints/
+datasets/
+cache/
+archives/
+*.part
+*.tar
+*.tar.gz
+*.zip
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.ssh/
+.jupyter/
+*.pem
+*.key
+# Ad-hoc logs; retain selected experiment evidence
+*.log
+!results/logs/*.log
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Model tensors and raw training files
+*.parquet
+*.hdf5
+*.h5
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+**/params/
+**/train_state/

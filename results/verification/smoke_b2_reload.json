@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "finished_at_utc": "2026-11-03T15:32:33.609180+00:00",
+  "config_name": "pi05_libero10_lora",
+  "checkpoint": "/root/autodl-tmp/pi-libero/checkpoints/pi05_libero10_lora/smoke_b2_20261103_230731/19",
+  "load_seconds": 7.958111122017726,
+  "inference_seconds": [
+    53.90325444703922,
+    0.11901062494143844,
+    0.12397379195317626
+  ],
+  "actions_shape": [
+    10,
+    7
+  ],
+  "all_actions_finite": true,
+  "checkpoint_norm_stats_match_training": true,
+  "checkpoint_norm_stats_sha256": "6acb523d1d7f50932078fd515138764e77a5765227746de06e8f7c360b28322c",
+  "input_kind": "official make_libero_example synthetic observation",
+  "libero_closed_loop_evaluation": false,
+  "training_started": false
+}

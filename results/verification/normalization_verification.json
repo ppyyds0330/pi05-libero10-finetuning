@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "finished_at_utc": "2026-11-01T10:16:02.178955+00:00",
+  "config": "pi05_libero10_lora",
+  "training_episodes": 329,
+  "validation_episodes_excluded": 50,
+  "frames": 87769,
+  "normalization_batch_size_only": 101,
+  "normalization_batches": 869,
+  "saved_training_batch_size": 1,
+  "stats_path": "/root/autodl-tmp/pi-libero/assets/pi05_libero10_lora/physical-intelligence/libero/norm_stats.json",
+  "stats_sha256": "6acb523d1d7f50932078fd515138764e77a5765227746de06e8f7c360b28322c",
+  "train_manifest_sha256": "e26dcc4de3eb2bb31c15cdfe0d65833a4c00da74d1fbcfa54a9fb64b5b14eede",
+  "loaded_by_training_config": true,
+  "quantile_normalization_probe_finite": true,
+  "source_unchanged_since_loader_check": true,
+  "independent_numeric_checks": {
+    "state": {
+      "dimensions": 8,
+      "count": 87769,
+      "max_mean_abs_error": 1.4125544964826986e-06,
+      "max_std_abs_error": 2.573664177885071e-07,
+      "max_q01_abs_error": 0.002191445398330938,
+      "max_q99_abs_error": 0.0015311579227450522
+    },
+    "actions": {
+      "dimensions": 7,
+      "count": 877690,
+      "max_mean_abs_error": 1.526057918921353e-08,
+      "max_std_abs_error": 2.7289107479289143e-07,
+      "max_q01_abs_error": 0.0006428418159485361,
+      "max_q99_abs_error": 0.00039999999999995595
+    }
+  },
+  "smoke_test_run": false,
+  "training_run": false
+}

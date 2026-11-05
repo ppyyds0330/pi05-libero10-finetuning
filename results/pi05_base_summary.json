@@ -1,0 +1,67 @@
+{
+  "model": "pi05_base",
+  "suite": "libero_10",
+  "videos": 10,
+  "successes_from_video_labels": 0,
+  "failures_from_video_labels": 10,
+  "success_rate_from_video_labels": 0.0,
+  "evidence": "historical_video_filenames_and_archived_sha256",
+  "rerun_during_project_upload": false,
+  "full_original_evaluation_log_available": false,
+  "notes": [
+    "Historical base run; exact inference settings were not reconstructed in this upload.",
+    "LIBERO interface and borrowed LIBERO normalization were used; this is not strict target-data-free zero-shot evaluation."
+  ],
+  "files": [
+    {
+      "path": "media/pi05_base/rollout_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_failure.mp4",
+      "bytes": 177634,
+      "sha256": "8fe00cef6a4bd0ad9dd29c83a28dc0fc19b3ea6a7e6e0b5f0ed8c1dab9e03187"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_moka_pots_on_the_stove_failure.mp4",
+      "bytes": 250911,
+      "sha256": "c8d5a4ea3e762e04130f1b4391ec4c89d893cf3a2cc8c948beff4e62267031fe"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_failure.mp4",
+      "bytes": 388482,
+      "sha256": "64773f09b7bb58428033b8c2a888e77f5e82a202757a4776e97f598b9b0cc46a"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_failure.mp4",
+      "bytes": 162267,
+      "sha256": "9c9428b38af86f70120a30d7488bc7306452263c18f7f8b15c8e48004934a7b0"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_failure.mp4",
+      "bytes": 169610,
+      "sha256": "f8b773791eaee8827ee78b260230010e11bac74d7095757af5f14fd0d2337720"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_failure.mp4",
+      "bytes": 286948,
+      "sha256": "945216e8451aa0ada880f276a9f99bf06d45e7f2489460cc340117d5e202256e"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_failure.mp4",
+      "bytes": 380078,
+      "sha256": "c227744d156d337ecb3b2ababb3269db6593b2e4c488797f4e2bc0971e7e98a7"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_failure.mp4",
+      "bytes": 361291,
+      "sha256": "d6e689f44532bc5730a2d736877246418facf0c3ffd9de7f7a5161f2ec97147e"
+    },
+    {
+      "path": "media/pi05_base/rollout_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_failure.mp4",
+      "bytes": 73973,
+      "sha256": "20e6a08218b2c00ef5efe6906ab6ddddd977a54cb696cd403b180352de6aa430"
+    },
+    {
+      "path": "media/pi05_base/rollout_turn_on_the_stove_and_put_the_moka_pot_on_it_failure.mp4",
+      "bytes": 224617,
+      "sha256": "1b240960c50b8b3b67751d64d3af7f8f393834d3d60bbf95a54b2f3b9ea4d6b2"
+    }
+  ]
+}
