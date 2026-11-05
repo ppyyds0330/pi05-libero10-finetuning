@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "public_files": 67,
-  "public_file_bytes": 6069954,
+  "public_file_bytes": 6071942,
   "credential_pattern_findings": [],
   "files_over_100_mib": [],
   "broken_relative_markdown_links": [],
@@ -38,5 +38,11 @@
     "gpu_training_rerun": false
   },
   "cloud_training_or_download_started": false,
-  "historical_base_videos_sha256_verified": true
+  "historical_base_videos_sha256_verified": true,
+  "readme_checks": {
+    "diagram_direction": "TB",
+    "directory_section_unchanged": true,
+    "weight_status_section_removed": true,
+    "upstream_src_location_explained": true
+  }
 }

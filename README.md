@@ -33,17 +33,32 @@
 ## 系统结构
 
 ```mermaid
-flowchart LR
-  A["LIBERO_10 演示数据"] --> B["329 训练 / 50 留出"]
-  B --> C["训练集归一化"]
-  C --> D["云端 π0.5 LoRA 微调"]
-  D --> E["WebSocket 模型服务"]
-  F["本地 WSL / LIBERO"] -->|"图像、状态、任务指令"| E
-  E -->|"动作序列"| F
-  F --> G["成功率、日志、MP4"]
+flowchart TB
+  DATA["LIBERO_10 演示数据<br/>379 条演示"]
+  SPLIT["数据划分<br/>329 条训练 · 50 条留出"]
+  NORM["训练集归一化<br/>仅使用 329 条训练演示"]
+  TRAIN["云端 LoRA 微调<br/>pi05_base · batch 2 · 40,000 步"]
+  SERVER["云端模型服务<br/>WebSocket · 端口 8000"]
+  CLIENT["本地 WSL / LIBERO 仿真<br/>执行动作并更新机器人状态"]
+  RESULT["评估与录制<br/>8 / 10 成功 · 日志 · MP4"]
+
+  DATA --> SPLIT
+  SPLIT --> NORM
+  NORM --> TRAIN
+  TRAIN --> SERVER
+  SERVER -->|"动作序列"| CLIENT
+  CLIENT -.->|"图像、状态与任务指令"| SERVER
+  CLIENT --> RESULT
+
+  classDef data fill:#eff6ff,stroke:#2563eb,color:#0f172a;
+  classDef cloud fill:#f0fdf4,stroke:#16a34a,color:#0f172a;
+  classDef local fill:#fff7ed,stroke:#ea580c,color:#0f172a;
+  class DATA,SPLIT,NORM data;
+  class TRAIN,SERVER cloud;
+  class CLIENT,RESULT local;
 ```
 
-云端承担模型训练和推理；本地 Ubuntu 22.04 / WSLg 负责 LIBERO 仿真与录制视频。本地仿真成功不表示已经验证 8GB 笔记本 GPU 能承载整个模型。
+云端承担模型训练和推理；本地 Ubuntu 22.04 / WSLg 负责 LIBERO 仿真与录制视频。客户端将图像、状态和任务指令发给模型服务，接收动作序列后执行，形成持续反馈的闭环。
 
 ## 目录
 
@@ -84,17 +99,46 @@ pi05-libero10-finetuning/
 
 ## 使用入口
 
-先在本项目根目录做资料核验，不需要 GPU，也不会下载数据或启动训练：
+### 训练代码在哪里
+
+本仓库采用**固定上游版本 + 本项目修改补丁**的组织方式，完整 OpenPI 训练框架由 `scripts/bootstrap_openpi.sh` 拉取，并应用 `patches/openpi-libero10-lora.patch`。
+
+默认准备完成后，真实源码位于云端：
+
+- `/root/autodl-tmp/pi-libero/openpi/src/openpi/`：模型、训练配置、数据加载器与策略实现。
+- `/root/autodl-tmp/pi-libero/openpi/scripts/train.py`：正式训练入口。
+- `/root/autodl-tmp/pi-libero/openpi/scripts/compute_norm_stats.py`：归一化统计入口。
+- `/root/autodl-tmp/pi-libero/openpi/scripts/serve_policy.py`：模型服务入口。
+- `/root/autodl-tmp/pi-libero/openpi/examples/libero/main.py`：LIBERO 客户端入口。
+
+因此，复现需要先取得上游源码、环境依赖、数据和 `pi05_base` 初始化权重，再执行 smoke 与正式训练。单独上传本仓库的文件并不包含这些外部运行资源。
+
+### 云端开始复现
+
+从上传或克隆后的本项目根目录执行：
+
+```bash
+export PROJECT_DIR="$PWD"
+export PI_ROOT=/root/autodl-tmp/pi-libero
+
+# 获取固定版本 OpenPI 和子模块，并应用本项目补丁
+bash scripts/bootstrap_openpi.sh "$PI_ROOT/openpi"
+
+# 安放训练 / 验证 ID 清单和保存的归一化统计
+python3 scripts/stage_metadata.py
+```
+
+然后依照 [完整复现步骤](docs/reproduction.md)，在云端安装依赖、下载并核验训练数据和初始化权重，检查真实加载器，再运行归一化、smoke 与正式训练。训练命令使用的是上面取得的 OpenPI 原版入口；准备脚本不会自动启动训练。
+
+补丁保留原实验的云端布局 `/root/autodl-tmp/pi-libero`；换布局时需要同步调整配置中的数据、权重和输出路径。
+
+### 仅核验本仓库资料
 
 ```bash
 python3 scripts/verify_project.py
 ```
 
-从头复现请依次阅读 [复现步骤](docs/reproduction.md) 与 [实现说明](docs/implementation.md)。补丁保留原实验的云端路径 `/root/autodl-tmp/pi-libero`；若换布局，需要同步修改配置中的路径。
-
-## 权重状态
-
-最终检查点已在云端完成保存并实际用于本次闭环评估。**本仓库不提供训练后权重，完整权重没有备份到本地。** 下载曾中断并按用户决定停止，因此本项目不能仅靠现有本地文件立即启动微调模型；需要重新取得完整检查点，或按文档重新训练。
+此检查不需要 GPU，不会下载数据或启动训练。它核对文件清单、329/50 划分、归一化统计和视频评估记录；实现细节见 [实现说明](docs/implementation.md)。
 
 ## 来源与许可
 
