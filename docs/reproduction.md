@@ -203,21 +203,7 @@ python examples/libero/main.py \
 
 仿真录制为 MP4，直接在本地 VS Code 中打开。首个请求有模型编译等待。此版本会遍历整个套件，不提供 --task-id 参数。
 
-## 9. 上传 GitHub
 
-在本项目根目录提交，先审阅 git status 和变更内容：
-
-```bash
-python3 scripts/verify_project.py
-git status --short
-git add README.md LICENSE THIRD_PARTY_NOTICES.md .gitignore .env.example \
-  upstream.lock.json PUBLIC_MANIFEST.json configs patches scripts data environments results media docs upstream
-git diff --cached --stat
-git commit -m "Document pi05 LIBERO10 LoRA reproduction and evaluation"
-# 创建自己的空仓库后再填入 URL：
-git remote add origin https://github.com/YOUR_USER/pi05-libero10-finetuning.git
-git push -u origin main
-```
 
 当前整理没有创建远端仓库或推送内容。完整权重、数据、环境和私有原始归档不属于提交内容。GitHub 普通 Git 仓库会阻止超过 100 MiB 的单个文件，参见 [GitHub 官方说明](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)。
 
